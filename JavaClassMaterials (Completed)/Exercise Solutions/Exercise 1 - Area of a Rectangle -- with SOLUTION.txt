@@ -1,0 +1,116 @@
+/* 
+Exercise 1: Area of Rectangle
+
+Write a program that will take in the lengths and width of a rectangle in inches.
+The output of the program should state the length, width, and area of the rectangle in appropriate units.
+
+Scroll down to see one solution.
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.Scanner;
+
+public class AreaOfRectangle
+{
+	public static void main(String[] args)
+	{
+		Scanner input = new Scanner(System.in);
+
+		System.out.println("This program will determine the area of a rectangle.");
+
+		System.out.println();
+
+		System.out.print("Enter the length of the rectangle: ");
+
+		double length;
+
+		length = input.nextDouble();
+
+		System.out.print("Enter the width of the rectangle: ");
+
+		double width;
+
+		width = input.nextDouble();
+
+		double area = length * width;
+
+		System.out.println();
+
+		System.out.println("The length of the rectangle is " + length + " inches."); 
+		System.out.println("The width of the rectangle is " + width + " inches.");
+		System.out.println("The area of the rectangle is " + area + " square inches.");	
+	}
+}
+
+
+
+
+
+
+
+
+
+

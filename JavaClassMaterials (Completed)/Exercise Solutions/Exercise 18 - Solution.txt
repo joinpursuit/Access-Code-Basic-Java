@@ -1,0 +1,46 @@
+/*
+
+Exercise 18: Using instanceof
+
+Using the classes from Exercise 16 (Computer, Laptop, Desktop), create a main function that creates an array of 
+computer of size 7 that fills the array with Computer, Laptop, and/or Desktop objects.  
+
+Use instanceof to iterate through the array and output the number of each that exist within the array.  
+
+*/
+
+
+//insert the below code into the main function of any of the 3 classes.  
+//Note that the default constructor may be used in this example since we only care about the type of object it is. 
+
+		Laptop a = new Laptop();
+		Laptop b = new Laptop();
+		Desktop c = new Desktop();
+		Desktop d = new Desktop();
+		Desktop e = new Desktop();
+		Desktop f = new Desktop();
+		Desktop g = new Desktop();
+		
+		Computer [] computers = new Computer[7];
+		
+		computers[0] = a;
+		computers[1] = b;
+		computers[2] = c;
+		computers[3] = d;
+		computers[4] = e;
+		computers[5] = f;
+		computers[6] = g;
+		
+		int numL = 0;
+		int numD = 0;
+		
+		for ( Computer com : computers )
+		{
+			if (com instanceof Laptop) numL++;
+			else if (com instanceof Desktop) numD++;
+		}
+		
+		System.out.println("There are " + numL + " laptops and " + numD + " desktops in this array.");
+		
+		
+		

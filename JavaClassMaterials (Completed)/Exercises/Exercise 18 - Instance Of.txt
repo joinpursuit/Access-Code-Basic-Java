@@ -1,0 +1,11 @@
+/*
+
+Exercise 18: Using instanceof
+
+Using the classes from Exercise 16 (Computer, Laptop, Desktop), create a main function that creates an array of 
+computer of size 7 that fills the array with Computer, Laptop, and/or Desktop objects.  
+
+Use instanceof to iterate through the array and output the number of each that exist within the array.  
+
+*/
+

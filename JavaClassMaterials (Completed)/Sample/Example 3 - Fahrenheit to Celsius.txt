@@ -1,0 +1,25 @@
+/* 
+Example 3: Write code that will take in temperature in Fahrenheit, then print the temperature in Celsius to console.  
+Note that the formula for conversion of temperature from Fahrenheit to Celsius is C = (F - 32) * (5/9)  
+*/ 
+
+
+import java.util.Scanner;
+
+public class ConvertFtoC
+{
+	public static void main(String[] args)
+	{
+		Scanner input = new Scanner(System.in);
+
+		System.out.print("Enter the temperature in Fahrenheit: ");
+
+		double fahrenheit;
+
+		fahrenheit = input.nextDouble();
+
+		double celsius = (fahrenheit - 32) / 9 * 5;
+
+		System.out.println("The temperature in Celsius is " + celsius);	
+	}
+}

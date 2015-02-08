@@ -1,0 +1,200 @@
+/*
+
+Example 26: Inheritance and Polymorphism
+
+Below is code for the classes Student, Undergrad, and Grad.  The code is slightly different than the code discussed in class. 
+Attempt to trace the code called in main to make sure that you can follow this and write similar code. 
+Pay close attention to methods called by different objects and how they work (especially toString and isPassing).
+
+Feel free to experiment, try new code, new methods, and make sure to be able to write thid code yourself.
+*/
+
+
+//Student class, also containing the main function
+
+public class Student
+{
+	private String name;
+	private String id;
+	private double GPA;
+
+	public Student( String n, String id)	//constructor
+	{
+		name = n;
+		this.id = id;
+		GPA = 0.0;
+	}
+
+	public void setName(String n)
+	{
+		name =n;	
+	}
+
+	public void setId(String id)
+	{
+		this.id = id;	
+	}
+
+	public void setGPA(double g)
+	{
+		GPA = g;
+	}
+	
+	public String getName()
+	{
+		return name;
+	}
+
+	public String getId()
+	{
+		return id;
+	}
+	
+	public double getGPA()
+	{
+		return GPA;
+	}
+
+	public boolean isPassing()
+	{
+		if (this.getGPA() > 2) 
+			return true;
+		else 
+			return false;
+	}
+	
+	public String toString()
+	{
+		return "The name of the student is " + name + ".  The ID of the student is " + id + ".  The GPA is " + GPA + ".";
+	}
+	
+	public static void main(String[] args)
+	{
+		Student[] students = new Student[5];
+		
+		students[0] = new Undergrad("Tyler", "1", "Computer Science", "None");
+		students[1] = new Grad("James", "2", "Mathematics", "Education");
+		students[2] = new Undergrad("Kathy", "3", "Biology", " None");
+		students[3] = new Grad("Mike", "4", "Computer Science", "Physics");
+		students[4] = new Undergrad("Michelle", "5", "English", "Fine Arts");
+		
+		students[0].setGPA(3.2);
+		students[1].setGPA(4.0);
+		students[2].setGPA(2.3);
+		students[3].setGPA(2.8);
+		students[4].setGPA(1.2);
+		
+		for (Student s: students)
+		{
+			System.out.println(s);
+			System.out.println();
+		}
+		
+		for (Student s: students)
+		{
+			if (s.isPassing() ) System.out.println(s.getName() + "is passing.");
+			else System.out.println(s.getName() + "is not passing.");
+		}	
+	}	
+}
+
+
+
+//THE UNDERGRAD CLASS
+
+
+public class Undergrad extends Student
+{
+	private String major;
+	private String minor;
+	
+	public Undergrad( String n, String id)
+	{
+		super(n,id);
+	}
+	
+	public Undergrad( String n, String id, String ma, String mi ) {
+		super(n, id); 		//parent class constructor
+		major = ma;
+		minor = mi;
+	}
+	
+	public void setMajor(String m)
+	{
+		major = m;	
+	}
+
+	public void setMinor(String m)
+	{
+		minor = m;	
+	}
+
+	public String getMajor()
+	{
+		return major;
+	}
+
+	public String getMinor()
+	{
+		return minor;
+	}
+	
+	public String toString()
+	{
+		return "The name of the student is " + this.getName() + ".  The ID of the student is " + this.getId() + ".  The GPA is " + this.getGPA() + "\nThestudent's major is " + major + ".  The student's minor is " + minor + "."; 
+	}
+			
+}
+
+
+//THE GRAD CLASS
+
+
+public class Grad extends Student {
+	private String thesisTopic;
+	private String thesisAdvisor;
+	
+	public Grad( String n, String id)
+	{
+		super(n,id);
+	}
+	
+	public Grad ( String n, String id, String tt, String ta ) {
+		super(n, id); 		//parent class constructor
+		thesisTopic = tt;
+		thesisAdvisor = ta;
+	}
+	
+	public void setMajor(String tt)
+	{
+		thesisTopic = tt;	
+	}
+
+	public void setMinor(String ta)
+	{
+		thesisAdvisor = ta;	
+	}
+
+	public String getThesisTopic()
+	{
+		return thesisTopic;
+	}
+
+	public String getThesisAdvisor()
+	{
+		return thesisAdvisor;
+	}
+
+	public boolean isPassing()
+	{
+		if (this.getGPA() > 3) return true;
+		else return false;
+	}
+	
+	public String toString()
+	{
+		return "The name of the student is " + this.getName() + ".  The ID of the student is " + this.getId() + ".  The GPA is " + this.getGPA() + "\nThe student's thesis topic is " + thesisTopic + ".  The student's thesis advisor is " + thesisAdvisor + "."; 
+	}
+			
+}
+

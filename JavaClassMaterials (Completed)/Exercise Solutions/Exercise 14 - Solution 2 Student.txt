@@ -1,0 +1,26 @@
+/*
+Exercise 14: Interaction between classes
+
+Create a class call Grade then perform the following tasks: 
+	a. Declare data members: 
+		i. Grade 
+		ii. Weight in percentage 
+	b. Methods: 
+		i. Get and set grades and weight 
+		ii. getWeightedGrade = grades * weight 
+
+Create a class call Student then perform the following tasks: 
+	a. Setup the following data members: 
+		i. firstName 
+		ii. lastName 
+		iii. Grades array (defined in pervious question) 
+	b. Define the following methods: 
+		i. Get and set methods for first and last name 
+		ii. Create addGrade methods and geGrades method return array 
+		iii. getFinalGrade – sum of all weighted grades 
+
+Note: make sure that these two classes exist within the same project folder
+*/
+
+		exam1.setGrade(100);
+		exam1.setWeightInPercent(20.0);

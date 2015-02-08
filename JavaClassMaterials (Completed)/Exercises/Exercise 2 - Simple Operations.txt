@@ -1,0 +1,14 @@
+/* 
+Exercise 2: Simple Java operations
+
+Write a program that prompts the user to enter two numbers, then outputs the following:  
+1. The sum of those two numbers.
+2. The product of those two numbers.
+3. The difference of those two numbers (first number minus the second number).
+4. The quotient of those two numbers (first number divided by the second number).
+5. The remainder of division (modulo, symbol %) of those two numbers (first number divided by the second number).
+
+The sum, product, difference, quotient, and remainder should all be int values.    
+The output should be a string printed to console with the above int values concatenated to the string.
+
+*/

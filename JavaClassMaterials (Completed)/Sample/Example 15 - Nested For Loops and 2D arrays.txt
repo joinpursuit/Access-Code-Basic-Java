@@ -1,0 +1,31 @@
+/*
+Example 15: Nested For Loop and 2D arrays
+
+This code will display prices for rugs of different lengths. It will create a basic 2D array as well.
+
+
+
+*/
+
+
+public class NestedForLoop {
+
+	public static void main(String[] args) {
+
+		int price;
+		System.out.println("Displaying prices for rugs");
+		
+		for (int width = 5; width <= 20; width++)
+		{
+			for (int length = 5; width <= 25; length+=5)
+			{
+				price = (width * length * 19);
+				System.out.print(" " + price);
+			}
+			System.out.println();
+		}
+
+
+	}
+
+}

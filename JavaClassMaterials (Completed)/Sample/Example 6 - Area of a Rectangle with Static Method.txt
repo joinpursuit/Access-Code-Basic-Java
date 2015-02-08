@@ -1,0 +1,61 @@
+/*
+Example 6: Static Methods
+
+This is a program that is very similar to Exercise 1 from Monday 7/9.
+However, this program includes the use of a single static function to calculate area rather than
+calculation within main.
+
+This is an example of calling a static method from the main class (also a static class). 
+
+
+
+Note1: Rather than importing java.util.Scanner; we have used the shortcut of import java.util.*; Recall that 
+this brings every class in the util package into the code.
+
+Note2: The name of the Scanner object so far has always been "input".  This is not required, and in this example
+we can see that it has instead been named "inKey".  "input" is not a keyword, simply a convenient name for a 
+Scanner object.
+ 
+*/
+
+
+import java.util.*;
+
+public class RectangleAreaStaticMethod {
+
+
+	 static double calculateArea(double length, double width) {
+	
+		 double area = length*width;
+		 return area;	
+	}
+
+	
+	public static void main(String[] args) {
+
+		Scanner inKey= new Scanner(System.in);
+
+		System.out.println("This program will determine the area of rectangle.");
+		System.out.println();
+
+		System.out.print("Enter the length of the rectangle: ");
+		double length;
+		length = inKey.nextDouble();
+
+		System.out.print("Enter the width of the rectangle: ");
+		double width;
+		width = inKey.nextDouble();
+
+		double area = calculateArea(length, width);
+
+
+		System.out.println();
+
+		System.out.println("The length of the rectangle is " + length + " inches."); 
+		System.out.println("The width of the rectangle is " + width + " inches.");
+		System.out.println("The area of the rectangle is " + area + " square inches.");		
+		
+
+	}
+
+}

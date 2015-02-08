@@ -1,0 +1,67 @@
+/*
+
+Exercise 29: Palindromes
+
+Write a recursive method that will determine if a given String is a palindrome (a string 
+that reads the same forwards and backwards (except for spaces, etc.). 
+For example,  
+    isPalindrome("noon"); 
+would return true. 
+
+Remember, you need a base case (the empty String is a palindrome, the null String is 
+not.) 
+
+Recursive case: A String is a palindrome if the first and last letters are the same, and the 
+String that remains after removing the first and last letters is a palindrome. 
+For example,  "noon" -> "noon" -> "oo" -> "" 
+
+Hint: To break up the String, substring("noon",1,4) is "oo".
+What about the spaces? Ignore them by proceeding to the next recursive call. 
+"Madam, I'm Adam" 
+"adam, I'm Ada" 
+"dam, I'm Ad" 
+"am, I'm A" 
+"m, I'm " 
+"m, I'm" 
+", I" 
+" I" 
+"I" 
+"" 
+You may also find these methods from the wrapper class Character helpful: 
+Character.isLetter(char ch) 
+Character.toUpperCase(Char ch) 
+Character.toUpperCase('M') is equal to Character.toUpperCase('m') 
+Try your program on strings that are not palindromes, as well as the following: 
+"noon","Madam I'm Adam", "A man, a plan, a canal, Panama", "A Toyota"
+
+Use the below code as a starting point. 
+
+*/
+
+
+			
+
+
+public class Palindrome {
+	public static void main(String[] args) {
+		System.out.println(isPalindrome("noon"));
+		System.out.println(isPalindrome("Madam I'm Adam"));
+		System.out.println(isPalindrome("A man, a plan, a canal, Panama"));
+		System.out.println(isPalindrome("A Toyota"));
+		System.out.println(isPalindrome("Not a palindrome"));
+		System.out.println(isPalindrome("asdfghfdsa"));
+	}
+	
+	public static boolean isPalindrome(String in) {
+		if(in==null) {
+			return false;
+		}
+		return isPalindromeHelper(in.toUpperCase());
+	}
+	
+	private static boolean isPalindromeHelper(String in) {
+		// Fill me in
+		return false;
+		
+	}
+}

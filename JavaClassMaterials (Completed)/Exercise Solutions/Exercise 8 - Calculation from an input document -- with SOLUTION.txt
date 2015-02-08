@@ -1,0 +1,110 @@
+/*
+
+Exercise 8: Input Calculation
+
+Write a program that will take in a provided text file that consists of many numbers.  Determine the sum of all numbers,
+the highest number, and the average of all numbers, and output these results to console.  
+
+**Don't forget to include your file input inside a Try block and Catch exceptions**
+**Make sure the input file is saved to the correct project folder in your workspace**
+
+
+
+See one possible solution below.
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
+
+public class InputCalculation{
+
+
+	public static void main(String[] args) {
+
+		String filename = "Exercise 8 - input.txt";
+
+		File file = new File( filename );
+		Scanner input;
+
+		try
+		{
+			input = new Scanner(file);
+		}
+		catch ( FileNotFoundException e )   //must have exception
+		{
+			System.err.println("Data file " + filename + " not found.");
+			return;
+		}
+		catch ( Exception e )
+		{
+			System.err.println( "Error: " + e );
+			return;
+		}
+
+		int sum = 0, max = 0;
+		int count = 0;
+		
+		if ( input.hasNextInt() )
+		{
+			sum = input.nextInt();
+			max = sum;
+			++count;
+		}
+		while ( input.hasNextInt() )
+		{
+			int num = input.nextInt();
+			if ( num > max )
+				max = num;
+			sum += num;
+			++count;
+		}
+		
+		System.out.println( "Sum: " + sum );
+		System.out.println( "Average: " + (double)sum / count );
+		System.out.println( "Max: " + max );
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+/*
+
+Example 30: Interface
+
+Below is the example of interface discussed in class.  
+
+*/
+
+
+//SPEAKER INTERFACE
+
+
+public interface Speaker{
+	String speak();
+}
+
+
+
+//COW CLASS IMPLEMENTS SPEAKER
+
+public class Cow implements Speaker{
+	public String speak() {
+	return "Moo!";
+	}
+}
+
+
+//SHEEP CLASS IMPLEMENTS SPEAKER
+
+public class Sheep implements Speaker{
+	public String speak() {
+		return "Baa!";
+	}
+}
+
+
+
+
+//BARN CLASS WITH MAIN
+
+public class Barn {
+
+	public static void main(String[] args) {
+
+		Sheep Dolly = new Sheep();
+		Cow Bessie = new Cow();
+
+		Speaker[] barnyard = new Speaker[2];
+
+		barnyard[0] = Dolly;
+		barnyard[1] = Bessie;
+
+		for (Speaker a : barnyard)
+			System.out.println( a.speak() );
+	}
+}

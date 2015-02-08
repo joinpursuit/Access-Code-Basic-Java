@@ -1,0 +1,32 @@
+/*
+Example 11: Scanner's Delimiter
+
+This code shows how we may change the delimiter value on a Scanner object and allow us to take in a full line from the 
+keyboard rather than a single world.
+
+
+*/
+
+
+import java.util.Scanner;
+
+public class ScannersDelimiter {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		String lineSeparator = System.getProperty("line.separator");
+
+		input.useDelimiter(lineSeparator);
+		String sentence;
+		System.out.println("Enter your favorite quote: ");
+		sentence = input.next();
+
+		System.out.println("You entered: " + sentence);
+		
+		System.out.print(sentence.charAt(14) );
+
+
+	}
+
+}

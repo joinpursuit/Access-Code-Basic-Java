@@ -1,0 +1,159 @@
+/*
+
+Exercise 9: Output Average Grades
+
+Use your solution to Exercise 4 from Tuesday 7/10 to complete this problem.
+
+
+Modify your code to do the following: 
+
+1. Ask for the name of the student before taking in 5 grades.  
+2. Create a loop that would allow this program to repeat until the name entered equals any variation of "done"
+3. Output the name of each student followed by their 5 grades followed by the average TO A FILE.
+
+
+One possible solution is found below. 
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.Scanner;
+import java.io.*;
+
+public class AverageGrades {
+
+	static double calculateAverage(int array[]){
+		
+		int sum = 0;
+		
+		for (int i = 0; i<5; i++)
+			sum+= array[i];
+		
+		double average = sum/5;
+		
+		return average;
+	}
+	
+	public static void main(String[] args) {
+
+		String filename = "Grades.txt";
+		File outfile = new File( filename);
+		PrintWriter output;
+		
+		try
+		{
+			FileOutputStream outStream = new FileOutputStream( outfile);
+			output = new PrintWriter(outStream);
+		}
+		
+		catch (FileNotFoundException e)
+		{
+			e.printStackTrace();
+			System.err.println(e);
+			return;
+		}
+		
+		catch (Exception e)
+		{
+			System.err.println(e);
+			return;
+		}
+		
+		int[] grades = new int[5];
+		
+		Scanner input = new Scanner (System.in);
+		
+		System.out.print("Enter in the name of the student: ");
+		String name = input.next();
+		
+		while (!name.equalsIgnoreCase("done") )
+		{
+		
+		System.out.println("Enter in 5 grades one at a time:");
+		
+		for (int i = 0; i<5; i++)
+			grades[i] = input.nextInt();
+		
+		double average = calculateAverage(grades);
+		
+		output.print("Name: " + name +  "    " );
+		
+		for (int i = 0; i<5; i++)
+			output.print("Grade 1: " + grades[i] + "    ");
+		
+		output.println("Average: " + average);
+		
+
+		System.out.println(); 
+		
+		System.out.print("Enter in the name of the next student: ");
+		name = input.next();
+		
+		}
+		
+		System.out.print("Thank you.  The information entered may be found in the file Grades.txt.");
+		
+		output.close();
+		
+	}
+
+}

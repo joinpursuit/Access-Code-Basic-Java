@@ -1,0 +1,116 @@
+/*
+
+Exercise 5: Reversing a string
+
+Write a program that will take in a word from the user, then outputs the original String, then that string in 
+reverse order.  The program will then prompt for another word and repeat until the word STOP, stop, Stop, or any 
+uppercase/lowercase variation of "stop" is typed in.  
+
+For example:
+If the original sentence is: JurassicPark!
+The reversed output should be: !kraPcissaruJ
+
+
+
+Hint 1: For the repetition, it is best to use an infinite loop and break when "stop" is entered.  Remember to look at 
+String methods for help withi all variations of "stop"
+
+Hint 2: There are several ways to complete this exercise, some very complicated, some very simple.  It may be helpful 
+to use StringBuilder and examine the API for it.
+
+
+Scroll down to see one possible solution.
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.*;
+
+public class reverseString {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		
+		String word;
+		StringBuilder result = new StringBuilder();
+		
+		while (true)
+		{
+			System.out.print("Enter next word to be reversed: ");
+			word = input.next();
+			
+			if (word.equalsIgnoreCase("stop"))
+				break;
+			
+
+			for(int i = word.length()-1 ; i >= 0; i--)
+			{
+				result.append( word.charAt(i) );
+			}
+
+			
+			System.out.println( "The original word is: " + word);
+			System.out.println( "The reversed word is: " + result);
+			
+			
+/*			alternate, and easier code:
+			result = new StringBuilder(word);
+			String reverse = result.reverse().toString();
+			
+			System.out.println( "The original word is: " + word);
+			System.out.println( "The reversed word is: " + reverse );
+*/
+			
+			
+			result.delete(0, word.length() );
+	
+			
+		}
+
+	}
+
+}

@@ -1,0 +1,119 @@
+/* 
+Exercise 2: Simple Java operations
+
+Write a program that prompts the user to enter two numbers, then outputs the following:  
+1. The sum of those two numbers.
+2. The product of those two numbers.
+3. The difference of those two numbers (first number minus the second number).
+4. The quotient of those two numbers (first number divided by the second number).
+5. The remainder of division (modulo, symbol %) of those two numbers (first number divided by the second number).
+
+The sum, product, difference, quotient, and remainder should all be int values.    
+The output should be a string printed to console with the above int values concatenated to the string.
+
+
+For example, if the two numbers entered are 10 and 2, the results should be: 
+The sum of those numbers is: 12.
+The product of those numbers is: 20.
+The difference of those numbers is: 8.
+The quotient of those numbers is: 5.
+The remainder of division is: 0.
+
+Scroll down for one solution.  
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.Scanner;
+
+public class SimpleOperations {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("This is an operations test.  You will enter 2 numbers, and several operations will be performed on them.");
+		System.out.println("Please enter the first number: ");
+		
+		int a = input.nextInt();
+		
+		System.out.println("Please enter the second number: ");
+		
+		int b = input.nextInt();
+		
+		int sum = a+b;
+		int product = a*b;
+		int difference = a-b;
+		int quotient = a/b;
+		int modulo = a%b;
+		
+		System.out.println("The sum of those numbers is: " + sum + ".");
+		System.out.println("The product of those numbers is: " + product + ".");
+		System.out.println("The difference of those numbers is: " + difference + ".");
+		System.out.println("The quotient of those numbers is: " + quotient + ".");
+		System.out.println("The remainder of division is: " + modulo + ".");
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+

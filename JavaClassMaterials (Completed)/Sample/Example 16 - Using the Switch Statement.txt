@@ -1,0 +1,44 @@
+/*
+Example 16: Using the Switch Statement
+
+This code will use a new selection control method using the switch and case keywords.
+
+This program will prompt the user to enter their grade level and based on their input, 
+direct them to a corresponding room. If their input does not match with any cases, 
+it will give an error. 
+
+
+
+*/
+
+import java.util.*;
+
+
+public class switchStatement {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+
+		System.out.print( "Enter your grade.  (1 – Frosh, 2 – Soph, 3-Junior, 4 – Senior): ");
+		int gradeLevel = input.nextInt();
+
+		switch (gradeLevel)
+			{
+			case 1: System.out.println("Go to the gym"); 
+				break;
+			case 2: System.out.println("Go to Room 104"); 
+				break;
+			case 3: System.out.println("Go to the theater"); 
+				break;
+			case 4: System.out.println("Go to the auditorium"); 
+				break;
+			default: System.out.println("Error: Invalid choice"); 
+				break;
+			}
+
+		System.out.println("Thank you and enjoy your day.");
+
+	}
+
+}

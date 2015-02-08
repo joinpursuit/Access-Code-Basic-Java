@@ -1,0 +1,17 @@
+/*
+
+Exercise 20: Formatting output
+
+
+Taken an array of numbers as shown below: 
+
+int[][] array = { {42, 628, 1, 98765, 14}, {8, 2543, 44, 2, 24631} ,  {8241, 36210, 2, 5, 234} }; 
+
+Use Formatter or format methods of string and System.out to output the 2D array where each element
+is aligned correctly in its own row and column.
+
+Hint: use a nested for loop.
+
+
+*/
+

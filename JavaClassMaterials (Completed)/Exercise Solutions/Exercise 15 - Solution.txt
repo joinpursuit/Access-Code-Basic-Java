@@ -1,0 +1,94 @@
+/*
+Exercise 15: The Graph class
+Write a class called Graph that will feature the following: 
+	a. A default constructor setting both x and y to 0. 
+	b. A two argument constructor setting x and y to the arguments. 
+	c. Two set methods for each of the data variables. 
+	d. Two get methods for each of the data variables. 
+	e. A method called midpoint that will return take another Graph object as its 
+		argument and calculate the midpoint of those two points. NOTE: The 
+		method is of type Graph. The midpoint formula is: 
+		(x1+x2/2, y1+y2/2) 
+	f. A method called distance that will calculate the distance between two 
+		points. The distance formula is as follows: 
+		sqrt ( (x2 - x1) ^ 2 +  (y2 - y1) ^ 2 )
+In Graph, create a main function.  Write code to take input from the user to create 2 objects.  
+Calculate the midpoint of those two objects and the distance between those two objects.
+
+Output all information to the console.  You may create a toString method for Graph if you wish.
+
+*/
+
+import java.lang.Math;
+import java.util.*;
+
+public class Graph{
+	double x;
+	double y;
+	
+	public Graph(){
+		x =0;
+		y =0;
+	}
+	
+	public Graph(double x, double y){
+		this.x =x;
+		this.y =y;
+	}
+
+	public void setX(double x){
+		this.x =x;
+	}
+		public void setY(double y){
+		this.y =y;
+	}
+		
+	public double getX(){
+		return x;
+	}
+	public double getY(){
+		return y;
+	}
+		
+	public Graph midpoint(Graph point2){
+		Graph mp = new Graph();
+		
+		double mpx = (this.x + point2.x)/2;
+		mp.setX(mpx);
+		
+		double mpy = (this.y + point2.y)/2;
+		mp.setY(mpy);
+		
+		return mp;
+	}
+	
+	public double distance(Graph point2){
+		double dist = 0.0;
+		Graph point1 = this;
+		
+		dist = Math.sqrt(Math.pow( (point1.getX() - point2.getX() ), 2) + Math.pow( (point1.getY()- point2.getY() ), 2) );
+		return dist;
+		
+	}
+	
+	public static void main(String[]args){
+		
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter in the x and y coordinate of the first point: ");
+		int p1x = input.nextInt();
+		int p1y = input.nextInt();
+		Graph p1 = new Graph(p1x, p1y);
+		
+		System.out.print("Enter in the x and y coordinate of the second point: ");
+		int p2x = input.nextInt();
+		int p2y = input.nextInt();
+		Graph p2 = new Graph(p2x, p2y);
+		
+		Graph mp = p1.midpoint(p2);
+		System.out.print("The midpoint of these two points is: (" + mp.getX() + ", " + mp.getY() + ")");
+		
+		System.out.print("The distance between these two points is: " + p1.distance(p2) );
+	}
+}
+
+

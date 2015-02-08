@@ -1,0 +1,108 @@
+/*
+
+Exercise 6: Replacing Vowels with X
+
+Write a program that will take in a sentence from the user, then change all vowels (uppercase and lowercase) 
+into the char 'x'.  Output the original sentence and the new sentence to the console when completed.
+
+
+
+Hint 1: You may wish to use a delimiter to take in a full sentence
+
+Hint 2: StringBuilder is a very useful took for String alteration.  Pay close attention to StringBuilder methods such as 
+- .length()
+- .charAt(index)
+- .setCharAt(index, char)
+
+All found in the API
+
+
+One possible solution is shown below. 
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	import java.util.*;
+
+	public class replaceVowels {
+
+		public static void main(String[] args) {
+
+			Scanner input = new Scanner(System.in);
+			input.useDelimiter(System.getProperty("line.separator"));
+			
+			StringBuilder build;
+			String sentence;
+
+			int numberOfCharacters;
+			char letter;
+			
+			System.out.println("Type a full sentence: ");
+			sentence = input.next();
+			
+			build = new StringBuilder(sentence);
+			
+			numberOfCharacters = build.length();
+			
+			for (int i = 0; i < numberOfCharacters; i++)
+			{
+				letter = build.charAt(i);
+				if (   (letter =='a') || (letter =='e') || (letter =='i') || (letter =='o') || (letter =='u')
+					|| (letter =='A')|| (letter =='E')|| (letter =='I')|| (letter =='O')|| (letter =='U') )
+				{
+					build.setCharAt(i, 'X');
+				}
+			}
+			
+			System.out.println("Input: " + sentence);
+			System.out.println("Output: " + build);
+			
+		}
+
+	}

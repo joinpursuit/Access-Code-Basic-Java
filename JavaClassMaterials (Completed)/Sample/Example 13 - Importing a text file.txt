@@ -1,0 +1,51 @@
+/*
+Example 13: Importing a text file
+
+This code will input the provided text file.  Observe the Try and Catch blocks.  This code will then output to the console each
+line of text from the text file.
+
+Note the try and catch blocks.
+
+**In order to run this code, the downloaded input file must be placed in the project where this class is located.**
+
+*/
+
+
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
+
+public class ReadingText {
+
+	public static void main(String[] args) {
+		String filename = Example 13 - input.txt";
+
+		File file = new File( filename );
+		Scanner input;
+		
+		try
+		{
+			input = new Scanner(file);
+		}
+		catch ( FileNotFoundException e )   //must have exception
+		{
+			System.err.println("Data file " + filename + " not found.");
+			return;
+		}
+		catch ( Exception e )
+		{
+			System.err.println(e);
+			return;
+		}
+
+		while( input.hasNextLine() )
+		{
+			String text = input.nextLine();
+			
+			System.out.println(text);
+		}
+		
+		input.close();
+	}
+
+}

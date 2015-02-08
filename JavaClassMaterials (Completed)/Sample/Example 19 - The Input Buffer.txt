@@ -1,0 +1,12 @@
+/*
+Example 19: Input Buffer
+
+Use the solution from Exercise 9 and in the console, enter in the following on one line:
+
+Amy 100 95 90 100 90 Rory 80 82 84 86 85 Rose 60 60 60 60 60 Martha 70 90 75 85 80 Donna 100 100 100 100 100 DONE
+
+Examine the output and the console 
+
+
+*/
+

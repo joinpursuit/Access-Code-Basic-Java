@@ -1,0 +1,41 @@
+/*
+Example 12: Working with StringBuilder
+
+This code will show us several methods that StringBuilder may use and how String and StringBuilder may be used together.
+*/
+
+
+import java.util.*;
+
+public class StringBuilderTest {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		input.useDelimiter(System.getProperty("line.separator"));
+		
+		StringBuilder build;
+		String sentence;
+
+		System.out.println("Type a full sentence: ");
+		sentence = input.next();
+		
+		build = new StringBuilder(sentence);
+		build.insert(0, "He said: ");
+		build.append("  Isn't that funny?");
+		
+	
+		System.out.println("Input: " + sentence);
+		System.out.println("Output: " + build);
+		
+		System.out.println();
+		
+		build.setCharAt(0, 'W');
+		System.out.println("Output after change: " + build);
+		
+		String text = build.toString();
+		System.out.println("Output as a String: " + text);
+	}
+
+}
+

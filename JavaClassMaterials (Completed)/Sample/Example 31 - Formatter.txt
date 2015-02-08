@@ -1,0 +1,46 @@
+/*
+
+Example 31: Formatter
+
+Below is the example of the formatter discussed in class.  
+
+*/
+
+
+import java.util.Formatter;
+
+public class formatTest {
+
+	public static void main(String[] args) {
+		int numX = 34;
+		int num2 = 9;
+		int num3 = numX + num2;
+
+		Formatter formatter = new Formatter(System.out);
+
+		formatter.format("%3d + %3d = %5d", numX, num2, num3);
+
+		System.out.println();
+		System.out.println();
+
+		formatter.format("%15.3f", 345.9867);
+
+		System.out.println();
+		System.out.println();
+		
+		formatter.format("Hello, %s.  How are you?", "John");
+
+		System.out.println();
+		System.out.println();
+
+		System.out.format("%5s is %3d years old", "Bill", 20);
+
+		System.out.println();
+		System.out.println();
+
+		String formattedText = String.format("%3d + %3d = %5d", numX, num2, num3);
+		System.out.println(formattedText);
+		
+	}
+
+}

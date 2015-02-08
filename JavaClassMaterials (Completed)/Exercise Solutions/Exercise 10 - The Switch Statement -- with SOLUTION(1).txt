@@ -1,0 +1,109 @@
+/*
+
+Exercise 10: The Switch Statement
+
+Modify Exercise 3 to use the switch statement.  Use the Default case instead of else.  
+You may use the solution posted for Exercise 3 as a starting point.  
+
+Scroll down to see one possible solution. 
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.Scanner;
+
+public class TemperatureConversion
+{
+	public static void main(String[] args)
+	{	
+		
+	
+		while (true){
+			
+		Scanner input = new Scanner(System.in);
+		int choice; 
+
+		double fahrenheit;
+		double celsius;
+		
+			System.out.println("This is a temperature conversion program.");
+			System.out.println("Please pick the conversion of your choice:");
+			System.out.println("(1) Fahrenheit -> Celsius");
+			System.out.println("(2) Celsius -> Fahrenheit");
+			System.out.print("Enter your choice: (1 or 2): ");
+			choice = input.nextInt();
+
+			switch ( choice)
+			{
+				case 1: System.out.print("Enter the temperature in Fahrenheit: ");
+				fahrenheit = input.nextDouble();
+				celsius = (fahrenheit - 32) / 9 * 5;
+				System.out.println("The temperature in Celsius is " + celsius);				
+				break;
+		
+				case 2: System.out.print("Enter the temperature in Celsius: ");
+				celsius = input.nextDouble();
+				fahrenheit = (9 * celsius)/ 5 + 32;
+				System.out.println("The temperature in Fahrenheit is " + fahrenheit);
+				break;
+				
+				default: 
+				System.out.print("That isn't a valid option, try again please.");
+			}
+			System.out.println();
+		}
+	}
+}

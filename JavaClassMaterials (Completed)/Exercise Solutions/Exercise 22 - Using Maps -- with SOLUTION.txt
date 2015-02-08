@@ -1,0 +1,84 @@
+/*
+
+Exercise 22: Using Maps
+
+Make a class familyMember (or use the Student class from an old example or exercise) that contains at least three data members:
+String firstName
+String lastName
+String relationship
+int age
+
+Create instances for several family members (at least 4) and fill in each data member in some way (constructors or set 
+methods).  Then create a TreeMap and assign each family member to an entry, with the key being the firstName.  
+
+Note: this means that the firstName should be both a data member of the class AND the key used to look up the information.
+If you have two people with the same firstName, include the middle name following the first name, or Junion, Senior, etc.
+
+Display all the entries in this map by printing.
+Display all the keys using keyset.
+Display all the values using .values().
+
+Use different methods to manipulate the data contained in this map.  
+
+Use the iterator class to display the keys one at a time with their associated values.
+
+
+*/
+
+import java.util.Iterator;
+import java.util.SortedMap;
+import java.util.TreeMap;
+
+public class familyMember {
+
+	private String firstName;
+	private String lastName;
+	private String relationship;
+	private int age;
+	
+	public familyMember(String fn, String ln, String r, int a){
+		firstName = fn;
+		lastName = ln;
+		relationship = r;
+		age = a;
+	}
+	
+	public String getFirstName(){
+		return firstName;
+	}
+
+	public String toString(){
+		return "Name: " + firstName + " " + lastName + "    Relationship: " + relationship + "   Age: " + age;
+	}
+	
+	public static void main(String[] args) {
+		familyMember a = new familyMember("Anddy", "Mashburn", "father", 55);
+		familyMember b = new familyMember("Becca", "Mashburn", "mother", 54);
+		familyMember c = new familyMember("Chris", "Mashburn", "brother", 20);
+		familyMember d = new familyMember("Darla", "Mashburn", "sister", 18);
+		familyMember e = new familyMember("Erica", "Mashburn", "pet", 8);
+		
+		SortedMap <String, familyMember> family = new TreeMap <String, familyMember> ();
+		
+		family.put(a.getFirstName(), a);
+		family.put(b.getFirstName(), b);
+		family.put(c.getFirstName(), c);
+		family.put(d.getFirstName(), d);
+		family.put(e.getFirstName(), e);
+		
+		System.out.println(family);
+		System.out.println(family.keySet());
+		System.out.println(family.values());
+		
+		Iterator<String> iterator = family.keySet().iterator();
+		
+		while ( iterator.hasNext() )
+		{
+			String key = iterator.next();
+			System.out.println("key: " + key +"         value: " + family.get(key));
+		}
+	}
+}
+
+			
+

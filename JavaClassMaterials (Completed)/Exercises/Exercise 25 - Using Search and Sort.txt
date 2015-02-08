@@ -1,0 +1,23 @@
+/*
+
+Exercise 25: Using search and sort
+
+Given an array 
+
+[3, 98, 34, 73, 91, 2, 54, 69, 4, 8, 15, 16, 23, 42]
+
+Perform the following in order:
+
+1. Use a basic search to check if the number 54 exists in this array.
+2. Use a basic search to check if the number 55 exists in this array.
+3. Perform any sort method on this array and print the result.
+4. Perform a binary search for 73.
+
+You may use the code in the examples to help you.
+
+
+*/
+
+
+			
+

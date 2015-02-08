@@ -1,0 +1,18 @@
+/*
+
+Exercise 4: Write a program that will create an array of size 5, then prompt the user to enter in 5 grades 
+one at a time, filling the array using a for loop.
+
+After the array has been filled, call a static method that will calculate the average of those 5 grades 
+and return that double to the main function.  The average then prints to console.    
+
+
+
+
+Hint 1: Using an array as an argument: double average = calculateAverage(grades);
+
+Hint 2: Using an array as a parameter: 	static double calculateAverage(int array[]){
+
+Hint 3: Remember that average is calculated by finding the sum of each grade and dividing by the number of grades.
+
+*/

@@ -1,0 +1,12 @@
+Exercise 12 - Creating your own class
+Create a new Java Project called CarsAndOwners
+Create a class named Car.
+Car should have several data members, such as color, year, make, model, etc.  You may choose your own data members.
+One data member MUST be Owner carOwner.
+Create constructors, get and set methods, and toString methods for Car.
+Create a class named Owner.
+Owner should have 2 data members, String name and Car carOwned.
+Create constructors, get and set methods, and toString methods for Owner.
+Create a main class named OwnerDetail.  
+Within this class, take in input from the keyboard to create three Car object and three Owner objects.  Use the constructors, get,and set functions to make each of the Car objects associated with one of the Owner objects, and each Owner object associated with the Car object (Hint: Use set method for this) 
+Experiment!  Write code in the main function that will allow the user to change data members or to print out information about the car and/or owner.  Try to include at least one example of get and set methods and the toString Method

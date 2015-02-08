@@ -1,0 +1,40 @@
+import java.util.*;
+
+public class LibraryCard {
+
+	Student owner;
+	int IDNum;
+	
+	//Constructor Method: initializes the Data Members with certain params
+		public LibraryCard(String s) {
+			owner.setName(s);
+			IDNum = 9999999;
+		}
+		public LibraryCard (int i) {
+			IDNum = i;
+		}
+		public LibraryCard(Student s, int i){
+			owner = s;
+			IDNum = i;
+		}
+			//Get Method: returns the value of a certain data member
+			public Student getOwner() {
+				return owner;
+			}
+			public int getIDNum() {
+				return IDNum;
+			}
+
+	//Set Method: assigns a value to a data member
+			public void setStudent (Student s){
+				owner = s;
+			}
+			public void setIDNum (int i){
+				IDNum = i;
+			}
+
+	//toString Method: creates an easy way to show all data member information in one string
+			public String toString () {
+				return "Student : " + owner.toString()  + "      ID#: " + IDNum;
+		}
+	}

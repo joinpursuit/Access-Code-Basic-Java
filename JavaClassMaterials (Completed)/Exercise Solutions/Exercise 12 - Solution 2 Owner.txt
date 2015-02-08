@@ -1,0 +1,43 @@
+public class Owner {
+
+private String name;
+private Car carOwned;
+	
+	public Owner()
+	{
+		name = "unknown";
+		carOwned = null;
+	}
+	
+	public Owner(String n, Car c)
+	{
+		name = n;
+		carOwned = c;
+	}
+
+
+	public void setName(String c){
+		name = c;
+	}
+	
+	public void setCarOwned(Car c){
+		carOwned = c;
+	}
+	
+	
+	public String getName() {
+		return name;
+	}
+	public Car getCarOwned() {
+		return carOwned;
+	}
+
+	
+	public String toString() {
+		return "Here is the information about the owner:  \nName: " + name + "       Car Detail: Color:" + carOwned.getColor() + "       Year: " + carOwned.getYear();
+	}
+			
+		
+	}
+
+

@@ -1,0 +1,39 @@
+import java.util.*;
+
+public class OwnerDetail {
+
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+
+		Owner own = new Owner();
+		Car c = new Car();
+		
+		System.out.println("The following will create a car and an owner object and associate them together.");
+		
+		System.out.print("Enter the name of the owner: ");
+		String ownerName = input.next();
+		
+		own.setName(ownerName);
+		own.setCarOwned(c);
+		
+		System.out.print("Enter the color of the car: ");
+		String col = input.next();
+		
+		System.out.print("Enter the year of the car: ");
+		int y = input.nextInt();
+		
+		c.setColor(col);
+		c.setYear(y);
+		c.setOwner(own);
+
+		System.out.println("Finished! ");
+		System.out.println(own);
+		
+		System.out.println();
+		
+		System.out.println(c);
+	}
+
+}

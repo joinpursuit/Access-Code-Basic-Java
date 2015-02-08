@@ -1,0 +1,55 @@
+/*
+
+Exercise 8: Input Calculation
+
+Write a program that will take in a provided text file that consists of many numbers.  Determine the sum of all numbers,
+the highest number, and the average of all numbers, and output these results to console.  
+
+**Don't forget to include your file input inside a Try block and Catch exceptions**
+**Make sure the input file is saved to the correct project folder in your workspace**
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

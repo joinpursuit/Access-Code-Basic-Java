@@ -1,0 +1,311 @@
+/*
+
+Exercise 16: The Computer, Laptop, and Desktop class
+
+
+Write a class called computer that has the data members: 
+	String brand;
+	String model;
+	double price;
+	double discount;
+
+It should have a default constructor that initializes the strings to "" and doubles to 0.
+It should have constructor that takes in 2 Strings and 2 doubles and initializes them.
+
+There should be a get and set method for all of the 4 data members.
+
+There should be a method getSalePrice, which is determined by price * (1-discount).
+There should be a method getAmountOff, which is determined by price * discount.
+
+There should be a toString method that will return all the data members (including the discount 
+as a percentage), as well as the sale price and amount off. 
+
+Within Computer, write a main function, create 5 new computers with the following information:
+	Toshiba, Satellite, 1299.50, .25
+	Apple, MacBook Air, 1759.50, .33
+	Dell, Inspiron, 449.99, .10
+	HP, Pavilion, 799.99, .05
+	Acer, Aspire, 899.99, .15
+
+Then print out each new object using the toString method.
+
+
+
+
+
+
+Write a class called Desktop that extends Computer that has the data member:
+	String monitor;
+
+Create a default constructor that does nothing.
+
+Create a constructor that takes in 2 Strings and 2 doubles and uses the super keyword to initialize
+them with the Computer constructor.  This constructor will initialize the data member monitor to "none"
+
+Create a constructor that takes in 2 Strings, 2 doubles, and another String.  The super keyword should
+be used to initialize the Computer data members as before, and the final String should initialize monitor.
+
+Create a get and set method for the monitor.
+
+Create a toString method that will return all information from the Computer toString method as well as the
+information about the monitor.  Hint: You may use super.toString() to call the toString method of the 
+superclass and use + to concatenate.
+
+Within Desktop, write a main function, create a new computer with the following information:
+	Dell, Inspiron, 449.99, .10, touch screen
+
+Then print out this object using the toString method.
+
+
+
+
+
+Write a class called Laptop that extends Computer that has the data members:
+	String tablet;
+	double weight;
+
+Create a default constructor that does nothing
+
+Create a constructor that takes in 2 Strings and 2 doubles and uses the super keyword to initialize
+them with the Computer constructor.  This constructor will initialize the data member weight to 5 and
+the data member tablet to "none"
+
+Create a get and set method for tablet and weight.
+
+Create a toString method that will return all information from the Computer toString method as well as the
+information about the tablet and weight.  Hint: You may use super.toString() to call the toString method of the 
+superclass and use + to concatenate.
+
+Within Desktop, write a main function, create a new computer with the following information:
+	Dell, Inspiron, 449.99, .10, regular
+
+Then print out this object using the toString method.
+
+*/
+
+
+
+
+
+
+public class Computer
+{
+	private String brand;
+	private String model;
+	private double price;
+	private double discount;
+	
+	public Computer()
+	{
+		brand = "";
+		model = "";
+		price = 0;
+		discount = 0;
+	}
+	
+	public Computer( String brand, String model, double price, double discount )
+	{
+		this.brand = brand;
+		this.model = model;
+		this.price = price;
+		this.discount = discount;
+	}
+
+	public double getSalePrice()
+	{
+		return price * ( 1 - discount );
+	}
+	
+	public double getAmountOff()
+	{
+		return price * discount;
+	}
+	
+	public String toString()
+	{
+		return brand + " - " + model + 
+			"    price: " + price + 
+			"    discount: " + discount*100 + "%" + 
+			"    sale: " + getSalePrice() +
+			"    save: " + getAmountOff();
+	}
+	
+	public static void main(String[] args)
+	{
+		Computer a = new Computer( "Toshiba", "Satellite", 1299.50, .25 );
+		System.out.println(a);
+		
+		Computer b = new Computer( "Apple", "MacBook Air", 1759.50, .33 );
+		System.out.println(b);
+		
+		Computer c = new Computer( "Dell", "Inspiron", 449.99, .10 );
+		System.out.println(c);
+		
+		Computer d = new Computer( "HP", "Pavilion", 799.99, .05 );
+		System.out.println(d);
+		
+		Computer e = new Computer( "Acer", "Aspire", 899.99, .15 );
+		System.out.println(e);
+	}
+	/*
+	 *  HP - Pavilion
+	 *  Toshiba - Satellite
+	 *  Acer - Aspire
+	 *  Dell - Inspiron
+	 *  Apple - MacBook Air
+	 */
+
+	public void setBrand( String b )
+	{
+		brand = b;
+	}
+	
+	public String getBrand()
+	{
+		return brand;
+	}
+	
+	public void setModel( String m )
+	{
+		model = m;
+	}
+	
+	public String getModel()
+	{
+		return model;
+	}
+	
+	public void setPrice( double p )
+	{
+		price = p;
+	}
+	
+	public double getPrice()
+	{
+		return price;
+	}
+	
+	public void setDiscount( double d )
+	{
+		discount = d;
+	}
+	
+	public double getDiscount()
+	{
+		return discount;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class Desktop extends Computer
+{
+	private String monitor;
+
+	public Desktop()
+	{
+	}
+
+	public Desktop(String brand, String model, double price, double discount)
+	{
+		super(brand, model, price, discount);
+		this.monitor = "none";
+	}
+	
+	public Desktop(String brand, String model, double price, double discount, String monitor)
+	{
+		super(brand, model, price, discount);
+		
+		this.monitor = monitor;
+	}
+/*
+	public String toString()
+	{
+		return "    monitor: " + monitor;
+//		return super.toString() + "    monitor: " + monitor;		
+	}
+*/
+
+	public static void main(String[] args)
+	{
+		Desktop c = new Desktop( "Dell", "Inspiron", 449.99, .10, "touch screen" );
+		System.out.println(c);
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class Laptop extends Computer {
+
+	private String tablet;
+	private double weight;
+	
+	public Laptop()
+	{
+	}
+
+	public Laptop(String brand, String model, double price, double discount)
+	{
+		super(brand, model, price, discount);
+		
+		this.weight = 5;
+		this.tablet = "none";
+	}
+
+	public Laptop(String brand, String model, double price, double discount, String tablet)
+	{
+		super(brand, model, price, discount);
+		
+		this.tablet = tablet;
+	}
+
+	/*
+	public String toString()
+	{
+		return "    tablet: " + tablet;
+//		return super.toString() + "    tablet: " + tablet;
+	}
+*/
+	public double getWeight()
+	{
+		return weight;
+	}
+	
+	public static void main(String[] args)
+	{
+		Laptop c = new Laptop( "Dell", "Inspiron", 449.99, .10, "regular" );
+		System.out.println(c);
+	}
+}

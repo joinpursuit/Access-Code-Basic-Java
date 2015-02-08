@@ -1,0 +1,72 @@
+/*
+Exercise 14: Interaction between classes
+
+Create a class call Grade then perform the following tasks: 
+	a. Declare data members: 
+		i. Grade 
+		ii. Weight in percentage 
+	b. Methods: 
+		i. Get and set grades and weight 
+		ii. getWeightedGrade = grades * weight 
+
+Create a class call Student then perform the following tasks: 
+	a. Setup the following data members: 
+		i. firstName 
+		ii. lastName 
+		iii. Grades array (defined in pervious question) 
+	b. Define the following methods: 
+		i. Get and set methods for first and last name 
+		ii. Create addGrade methods and geGrades method return array 
+		iii. getFinalGrade – sum of all weighted grades 
+
+Note: make sure that these two classes exist within the same project folder
+*/
+
+public class Grade {
+
+	private double grade;
+	private double weightInPercent;
+	
+	public double getGrade(){
+		return grade;
+	}
+	
+	public double getWeightInPercent(){
+		return weightInPercent;
+	}
+	
+	public void setGrade(double g){
+		grade = g;
+	}
+	
+	
+	public void setWeightInPercent(double w){
+		weightInPercent = w;
+	}
+	
+	public double getWeightedGrade(){
+		double weightGrade = grade * weightInPercent /100;
+		return weightGrade;
+	}
+	
+	public static void main(String[]args){
+		Grade exam1 = new Grade();
+		exam1.setGrade(100);
+		exam1.setWeightInPercent(20.0);
+			
+		Grade exam2 = new Grade();
+		exam2.setGrade(80);
+		exam2.setWeightInPercent(80.0);
+		
+		Student kid = new Student("James", "Norton");
+		
+		kid.addGrade(exam1);
+		kid.addGrade(exam2);
+		
+		double finalGrade = kid.getFinalGrade();
+		
+		System.out.println("The final grade for James Norton is: " + finalGrade);
+		
+	}
+	
+}

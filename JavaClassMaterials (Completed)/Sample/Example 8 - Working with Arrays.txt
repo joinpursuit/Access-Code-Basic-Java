@@ -1,0 +1,41 @@
+/*
+Example 8: Working with arrays
+
+This code is to show how arrays work in Java.  There are several important things to note here.
+
+Two arrays are created, nums[] and marks[].  The [] in the declaration may be placed with the data type 
+or with the name of the array and will not change the result.  However, convention states that we place the []
+next to the data type.  
+
+The array nums is size 7 and contains the numbers 1-7.
+
+The array marks is size 5 and contains all 0's, until the element at index 1 is assigned a value of 98.
+
+
+If we remove the comment marks around System.out.println(nums[7]);, we would get an exception.  
+This is because the nums array is of size 7, and only has index values of 0 to 6. 
+
+ 
+*/
+
+public class ArrayTest {
+
+	public static void main(String[] args) {
+
+		int[] nums = {1,2,3,4,5,6,7};
+		
+		int marks[] = new int [5];
+		
+		marks[1] = 98;
+		
+		System.out.println(nums[0]);
+		System.out.println(nums[1]);
+		System.out.println(nums[2]);
+		System.out.println(nums[3]);
+//		System.out.println(nums[7]);
+		
+		System.out.println(marks[0]);
+		System.out.println(marks[1]);
+	}
+
+}

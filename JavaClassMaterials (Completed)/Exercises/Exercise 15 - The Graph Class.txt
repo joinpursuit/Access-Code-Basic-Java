@@ -1,0 +1,24 @@
+/*
+
+Exercise 15: The Graph class
+
+Write a class called Graph that will feature the following: 
+	a. A default constructor setting both x and y to 0. 
+	b. A two argument constructor setting x and y to the arguments. 
+	c. Two set methods for each of the data variables. 
+	d. Two get methods for each of the data variables. 
+	e. A method called midpoint that will return take another Graph object as its 
+		argument and calculate the midpoint of those two points. NOTE: The 
+		method is of type Graph. The midpoint formula is: 
+		(x1+x2/2, y1+y2/2) 
+	f. A method called distance that will calculate the distance between two 
+		points. The distance formula is as follows: 
+		sqrt ( (x2 - x1) ^ 2 +  (y2 - y1) ^ 2 )
+
+
+In Graph, create a main function.  Write code to take input from the user to create 2 objects.  
+Calculate the midpoint of those two objects and the distance between those two objects.
+
+Output all information to the console.  You may create a toString method for Graph if you wish.
+
+*/

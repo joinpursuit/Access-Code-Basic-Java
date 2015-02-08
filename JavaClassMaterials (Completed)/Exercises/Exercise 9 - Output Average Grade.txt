@@ -1,0 +1,16 @@
+/*
+
+Exercise 9: Output Average Grades
+
+Use your solution to Exercise 4 from Tuesday 7/10 to complete this problem.
+
+
+Modify your code to do the following: 
+
+1. Ask for the name of the student before taking in 5 grades.  
+2. Create a loop that would allow this program to repeat until the name entered equals any variation of "done"
+3. Output the name of each student followed by their 5 grades followed by the average to a file named Grades.txt.
+
+
+
+*/

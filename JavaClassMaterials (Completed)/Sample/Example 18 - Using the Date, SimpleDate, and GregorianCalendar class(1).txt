@@ -1,0 +1,45 @@
+/*
+Example 18: Using the Date, SimpleDate, and GregorianCalendar Class
+
+The following code will first create a Date object for today, then display all of the information about today.
+
+The code will then display today's date, month, and year only.
+The code will then display today's date and time.
+
+Finally, the code will create a GregorianCalendar object for Christmas of 2005 and output the year, month, and date.
+
+
+*/
+
+import java.util.*;
+import java.text.*;
+
+
+public class DateAndTime {
+
+	public static void main(String[] args) {
+
+			Date today = new Date();
+			System.out.println("The date and time are: " + today.toString() );
+			
+			System.out.println();
+			
+			SimpleDateFormat MonthDayYear = new SimpleDateFormat("MM/dd/yy");
+			System.out.println("Today is: " + MonthDayYear.format(today) );
+			
+			SimpleDateFormat DayHourMinute = new SimpleDateFormat("dd hh:mm");
+			System.out.println("The date and time are: " + DayHourMinute.format(today) );
+			
+			System.out.println();
+			
+			GregorianCalendar christmas2005 = new GregorianCalendar(2005, 11, 25);
+			int year = christmas2005.get(Calendar.YEAR);
+			int mon = christmas2005.get(Calendar.MONTH);
+			int date = christmas2005.get(Calendar.DATE);
+
+			System.out.println("The year of Christmas of 2005 is: " + year);
+			System.out.println("The month of Christmas of 2005 is: " + mon);
+			System.out.println("The date of Christmas of 2005 is: " + date);
+	}
+
+}

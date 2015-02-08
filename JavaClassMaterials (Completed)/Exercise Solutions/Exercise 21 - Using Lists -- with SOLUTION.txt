@@ -1,0 +1,63 @@
+/*
+
+Exercise 21: Using Lists
+
+
+Using the class Computer, Laptop, and Desktop from Exercise 16, either make a new 
+class or insert into main, code that will make a List (either Array or Linked) of computer.  
+Then add the following 5 following computer objects to that list using appropriate methods:
+
+Laptop:   "Toshiba", "Satellite", 1299.50, .25, "yes"
+Laptop:   "Apple", "MacBook Air", 1759.50, .33 
+Desktop:  "Dell", "Inspiron", 449.99, .10 
+Desktop:  "HP", "Pavilion", 799.99, .05 
+Laptop:   "Acer", "Aspire", 899.99, .15 
+
+Display the information contained in this list using the .toString methods of the list.
+
+Remove the HP Pavilion computer from the list and add the following computers to the 
+end of the list using appropriate methods: 
+
+Laptop:   "Sony", "VAIO", 1199.99, .25
+Desktop:  "Alienware", "Aurora", 1499.88, .10
+
+Display the new list.
+
+Experiment with various other methods that exist with the List interface.
+
+
+
+*/
+
+
+		List<Computer> list = new ArrayList<Computer>();
+		
+		Computer a = new Laptop( "Toshiba", "Satellite", 1299.50, .25, "yes" );
+		Computer b = new Laptop( "Apple", "MacBook Air", 1759.50, .33 );
+		Computer c = new Desktop( "Dell", "Inspiron", 449.99, .10 );
+		Computer d = new Desktop( "HP", "Pavilion", 799.99, .05 );
+		Computer e = new Laptop( "Acer", "Aspire", 899.99, .15 );
+		
+		list.add(a);
+		list.add(b);
+		list.add(c);
+		list.add(d);
+		list.add(e);
+		
+		for( Computer comp : list)
+			System.out.println(comp.toString() );
+		
+		System.out.println();
+		
+		list.remove(d);
+		
+		Computer f = new Laptop( "Sony", "VAIO", 1199.99, .25);
+		Computer g = new Desktop( "Alienware", "Aurora", 1499.88, .10);
+		
+		list.add(f);
+		list.add(g);
+		
+		for( Computer comp : list)
+			System.out.println(comp.toString() );
+	
+			

@@ -1,0 +1,58 @@
+/*
+
+Exercise 27: Creating a LinkedList Class
+
+Though we have a LinkList class already, in this exercise your task is to create your own 
+version of this class from scratch.  Assume the LinkList is going to be composed of ints.
+
+In order to make a LinkList class, you will first need a Node class.
+It should have 2 data members, an int named data(this is the actual information), and a 
+Node named next (this is the pointer to the next Node).  These may be made public.
+
+The Node class should have a simple constructor for a single int d, assigning data to d and
+assigning next to null.  It should also have a toString method where the data is returned as
+a String.
+
+
+The LinkList class should have only one data member, public Node head.  This represents the
+first node in our LinkList.  LinkList should have a default constructor where head = null.
+
+LinkList should have several methods:
+
+
+*public int size() { - returns the size of the LinkList
+
+*public void add(Node n) { - adds Node n to the LinkList.  Take into account if the list is 
+ empty, or if Nodes already exist.
+
+*public void print() { - prints out the data in the LinkList in order
+
+*public void print (Node n) { - prints out the data from Node n to the last Node
+
+*public Integer get (int index) { - gets the data contained in that index
+
+*publid void insert( int index, Node n) { - inserts the Node n into at the location index.  If 
+ the location 'index' is more than the size of the list, add it to the end.  If the location 
+ 'index' is 0, make it the new head. 
+
+*public void delete (int index) { - removes the Node n at the location index.
+
+*public void printReverse (Node N) { - prints out the data in the LinkList in reverse order
+
+*public void sort() { - sort the list from least to greatest.  Use any sort method.
+
+
+
+After these methods have been made, create a main function and create a new LinkList.  Fill 
+that LinkList with 10 random integers from 1 to 100.
+
+Print this list, then sort the list, then print it again.  
+
+Call the reverse Print method.
+
+
+*/
+
+
+			
+

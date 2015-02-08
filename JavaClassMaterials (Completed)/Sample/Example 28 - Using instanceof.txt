@@ -1,0 +1,20 @@
+/*
+
+Example 28: Using instanceof
+
+Below is a modification of the code for the classes Student, Undergrad, and Grad from exercise 27.  
+Insert the below code into the main function of Student class.  We will use instance of to find out how many 
+Undergrad and Grad students are in this array.
+
+*/
+
+
+int numUndergrad = 0;
+int numGrad = 0;
+
+for (Student s : students)
+	if (s instanceof Undergrad) numUndergrad++;
+	if (s instanceof Grad) numGrad++;
+
+System.out.println( "The number of Undergrad students in this class is: " + numUndergrad);
+System.out.println( "The number of Graduate students in this class is: " + numGrad");

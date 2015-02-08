@@ -1,0 +1,93 @@
+/*
+Example 9: String Experiment
+
+The following code shows a number of examples of different operators that are available for Strings.
+These functions are self-explanatory, and the comments should provide some further clarification.
+
+ 
+*/
+
+
+
+public class StringExperiment
+{
+	public static void main(String[] args)
+	{
+		String x = "Espresso";
+		String y = new String( "Espresso" );
+		String z = "Espresso";
+		
+		System.out.println(x.substring(5));
+		System.out.println(x.substring(2, 7));
+
+
+
+		//string literal vs. string object
+		if ( x == y )
+			System.out.println("x == y");
+		else
+			System.out.println("x != y");
+		
+
+		//string literal example
+		if ( x == z )
+			System.out.println("x == z");
+		else
+			System.out.println("x != z");
+
+
+
+
+		// comparison done using equals and compareTo
+		x = "another example";
+		y = "another ";
+		z = "example";
+		if ( x.equals(y + z) )
+			System.out.println( "x.equals(y + z) is true" );
+		else
+			System.out.println( "x.equals(y + z) is false" );
+		
+		if ( x.compareTo( y + z ) == 0 )
+			System.out.println( "x.compareTo( y + z ) is 0" );
+		else
+			System.out.println( "x.compareTo( y + z ) is NOT 0" );
+
+
+
+
+		//demonstration of index of
+		x = "Lots of examples working with strings in java, exciting huh?";
+		System.out.println( "index of 'ex': " + x.indexOf("ex") );
+		System.out.println( "lastIndex of 'ex': " + x.lastIndexOf("ex") );
+		
+		//using starts with
+		if ( x.startsWith("Lots") )
+			System.out.println( "x starts with Lots" );
+		else
+			System.out.println( "x does NOT start with Lots" );
+		
+
+
+		//demonstration of replace
+		String text = "This is a sentence.";
+		System.out.println( text.replace("sentence", "classroom") );
+
+		System.out.println( "length of '" + text + "': " + text.length() );
+
+
+
+		//toUpper and toLower
+		System.out.println( text.toUpperCase() );
+		System.out.println( text.toLowerCase() );
+
+
+		
+		//tokenize a string
+		String[] temp = text.split(" ");
+		System.out.println("string: " + text + " has [ " + temp.length + " ] tokens.");
+		System.out.println(temp[0]);
+		System.out.println(temp[1]);
+		System.out.println(temp[2]);
+		System.out.println(temp[3]);
+	}
+}

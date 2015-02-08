@@ -1,0 +1,106 @@
+/*
+
+Example 32: Lists
+
+Below is the example of the use of maps as discussed in class.  
+Try to run this code and see how it operates. 
+
+
+*/
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.SortedMap;
+import java.util.TreeMap;
+
+
+
+public class MapTest {
+
+	public static void main(String[] args) {
+		
+		
+		HashMap <String, String> table = new HashMap <String, String> ();
+		
+		
+		
+		table.put("CS212", "What a great class!");
+		System.out.println(table);
+		
+		table.put("CS213", "Love the labs!");
+		System.out.println(table);
+		
+		table.put("CS214", "I need more help studying" );
+		System.out.println(table);
+		
+		table.put("CS215", "The text book is not needed");
+		System.out.println(table);
+		
+		table.put("CS000", "So easy, anyone can get an A" );
+		System.out.println(table);
+		
+		table.put("CS999", "I have no idea what's going on" );
+		System.out.println(table);
+		
+		
+		table.put("CS211", "I like C++");
+		System.out.println(table);
+
+		
+		System.out.println();
+		
+		System.out.println( "The value stored in CS212 is: " + table.get("CS212") );
+		
+		if(table.containsKey("CS211") ) System.out.println("CS211 exists!");
+		else System.out.println("CS211 does not exist.");
+		
+		
+		System.out.println();
+
+		System.out.println(table.keySet());
+		System.out.println(table.values());
+		
+		System.out.println();
+		
+		Iterator <String> iterator = table.keySet().iterator();
+		
+		while (iterator.hasNext() )
+		{
+			String key = iterator.next();
+			System.out.println("key: " + key + " value: " + table.get(key) );
+		}
+
+		System.out.println();
+		System.out.println();
+			
+		SortedMap<String, String> map = new TreeMap<String, String>();
+				map.put("2", "Two"); //Add some elements
+				map.put("1", "One");
+				map.put("5", "Five");
+				map.put("4", "Four");
+				map.put("3", "Three");
+				System.out.println( map ); //Print out the map alphabetically
+				
+				System.out.println(map.firstKey() ); //Get the first key
+				System.out.println(map.lastKey() ); //Get the last key
+				
+				
+				SortedMap <String, String> map2 = map.headMap("3"); //Return all entries before "3" NOT inclusive
+				System.out.println(map2);
+				
+				SortedMap <String, String> map3 = map.tailMap("3"); //Return all entries after "3" inclusive
+				System.out.println(map3);
+				//gets iterator to access keys
+				
+				Iterator<String> it = map.keySet().iterator();
+				System.out.println("The list of keys for this collection is: ");
+				while(it.hasNext() )
+				{
+					System.out.println(it.next() );
+				}
+		
+				
+	}
+
+}

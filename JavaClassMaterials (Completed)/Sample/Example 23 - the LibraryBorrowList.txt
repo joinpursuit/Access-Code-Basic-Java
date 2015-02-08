@@ -1,0 +1,54 @@
+import java.util.Scanner; 
+
+public class LibraryBorrowList
+{
+	public static void main(String[] args)
+	{
+
+		System.out.print( "Enter the name of the person borrowing a book: ");
+
+		
+		Scanner input = new Scanner(System.in);
+		String name = input.nextLine();
+		
+		
+		System.out.print( "Enter the age of the person borrowing a book: ");
+		int age = input.nextInt();
+
+
+		Student Borrower = new Student(name, age);  //this is a constructor of student.  We have the parameter (String, int), so the String will be the name and the int will be the age.
+		
+		System.out.println( "The name of the Borrower is: " + Borrower.getName() );   //this is a get method.  
+		
+		int choice = 1;
+		
+		while (choice == 1 || choice ==2)
+		{
+			System.out.print( "Do you want to change the information of the Borrower?  Press 1 for name and 2 for age.  Press any other value to leave");
+			choice = input.nextInt();
+			
+			
+	
+			switch (choice)
+			{		
+				case 1:  System.out.print( "What would you like to change " + Borrower.getName() + "'s name to?");
+					String newName = input.next();
+					Borrower.setName(newName);		//this is a set method
+					break;
+					
+				case 2: System.out.print( "What would you like to change " + Borrower.getName() + "'s age to?");
+					int newAge = input.nextInt();
+					Borrower.setAge(newAge);		//this is a set method
+					break;
+				
+				default: System.out.println( "All done!  Thank you.");
+					
+			}
+		}
+		
+		
+		
+		
+		System.out.println(Borrower.toString() );   //this will utilize our toString method of student
+	}
+}

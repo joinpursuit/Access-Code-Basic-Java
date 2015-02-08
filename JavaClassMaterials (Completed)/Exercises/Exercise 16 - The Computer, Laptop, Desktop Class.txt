@@ -1,0 +1,84 @@
+/*
+
+Exercise 16: The Computer, Laptop, and Desktop class
+
+
+Write a class called computer that has the data members: 
+	String brand;
+	String model;
+	double price;
+	double discount;
+
+It should have a default constructor that initializes the strings to "" and doubles to 0.
+It should have constructor that takes in 2 Strings and 2 doubles and initializes them.
+
+There should be a get and set method for all of the 4 data members.
+
+There should be a method getSalePrice, which is determined by price * (1-discount).
+There should be a method getAmountOff, which is determined by price * discount.
+
+There should be a toString method that will return all the data members (including the discount 
+as a percentage), as well as the sale price and amount off. 
+
+Within Computer, write a main function, create 5 new computers with the following information:
+	Toshiba, Satellite, 1299.50, .25
+	Apple, MacBook Air, 1759.50, .33
+	Dell, Inspiron, 449.99, .10
+	HP, Pavilion, 799.99, .05
+	Acer, Aspire, 899.99, .15
+
+Then print out each new object using the toString method.
+
+
+
+
+
+
+Write a class called Desktop that extends Computer that has the data member:
+	String monitor;
+
+Create a default constructor that does nothing.
+
+Create a constructor that takes in 2 Strings and 2 doubles and uses the super keyword to initialize
+them with the Computer constructor.  This constructor will initialize the data member monitor to "none"
+
+Create a constructor that takes in 2 Strings, 2 doubles, and another String.  The super keyword should
+be used to initialize the Computer data members as before, and the final String should initialize monitor.
+
+Create a get and set method for the monitor.
+
+Create a toString method that will return all information from the Computer toString method as well as the
+information about the monitor.  Hint: You may use super.toString() to call the toString method of the 
+superclass and use + to concatenate.
+
+Within Desktop, write a main function, create a new computer with the following information:
+	Dell, Inspiron, 449.99, .10, touch screen
+
+Then print out this object using the toString method.
+
+
+
+
+
+Write a class called Laptop that extends Computer that has the data members:
+	String tablet;
+	double weight;
+
+Create a default constructor that does nothing
+
+Create a constructor that takes in 2 Strings and 2 doubles and uses the super keyword to initialize
+them with the Computer constructor.  This constructor will initialize the data member weight to 5 and
+the data member tablet to "none"
+
+Create a get and set method for tablet and weight.
+
+Create a toString method that will return all information from the Computer toString method as well as the
+information about the tablet and weight.  Hint: You may use super.toString() to call the toString method of the 
+superclass and use + to concatenate.
+
+Within Desktop, write a main function, create a new computer with the following information:
+	Dell, Inspiron, 449.99, .10, regular
+
+Then print out this object using the toString method.
+
+*/

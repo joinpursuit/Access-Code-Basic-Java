@@ -1,0 +1,51 @@
+/*
+Example 4: Guessing Game with the Random utility (if and while loops)
+
+This program allows the user to play a simple game of guessing a number between 1 and 10.  
+Program will give the user a hint if the guess is too big or small.
+
+Please make sure that you understand the format of the while loop and the if/else blocks.
+
+
+
+Note: We must import the Random class and create an object from it (rand).  
+From this code, we can see one method, rand.nextInt(10), returns a random integer from 0 to 9.
+We can use the Java API to get other functions of this class.
+ 
+*/
+
+
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class GuessGame
+{
+	public static void main(String[] args)
+	{	
+		Scanner input = new Scanner(System.in);
+		Random rand = new Random();
+		
+		int secret = rand.nextInt(10) + 1;
+
+		System.out.print("Guess a number between 1 and 10: ");
+		int guess = input.nextInt();
+		
+		while( guess != secret )
+		{
+			if ( guess > secret )
+			{
+				System.out.print("Guess a smaller number: ");
+				guess = input.nextInt();
+			}
+			else
+			{
+				System.out.print("Guess a bigger number: ");
+				guess = input.nextInt();
+			}
+		}
+		
+		System.out.println("You got it!");
+	}
+
+}

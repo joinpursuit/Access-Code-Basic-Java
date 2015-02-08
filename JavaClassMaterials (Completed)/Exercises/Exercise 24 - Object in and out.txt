@@ -1,0 +1,18 @@
+/*
+
+Exercise 24: Objects in and Out
+
+Using the familyMember class and the objects created from Exericse 22, write each object to a file using the 
+methods discussed in class.  
+
+Try to examine the file as created. 
+
+In another class, use this file as input and display each object contained within (using toString or manually).  
+
+
+
+*/
+
+
+			
+

@@ -1,0 +1,8 @@
+/* 
+Exercise 1: Area of a Rectangle
+
+Write a program that will take in the lengths and width of a rectangle in inches.
+The output of the program should state the length, width, and area of the rectangle in appropriate units.
+*/
+
+

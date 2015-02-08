@@ -1,0 +1,61 @@
+/*
+
+Exercise 28: Recursion with an array
+
+Insert the following array of numbers into a class:
+
+int[] arr = {3,5,9,4,10,33,12,19,4,15,23,30};
+
+insert statements to call the recursive methods below and print the results from each:
+
+
+
+Write and run the following recursive methods from within main:
+
+
+public static int largest(int[] myArray, int index) {
+//The largest number in the array is the larger of the first number in the array, and 
+//the largest number in the rest of the array.
+}
+
+
+public static int sum (int[] myArray, int index) {
+//The sum of the numbers in the array is the first number plus the sum of the rest of the  
+//numbers in the array.
+
+}
+
+
+public static Boolean isSorted(int[] myArray, int index) {
+//The array is sorted if the first number in the array is less than or equal to the second
+//number in the array, and the rest of the array is sorted.
+
+}
+
+
+public static void print( int[] myArray) {
+//Write a recursive method which prints the values of each int in the list from 
+//first to last. 
+}
+
+
+public static void printReverse( int[] myArray) {
+//Write a recursive method which prints the values of each int in the list from 
+//last to first. 
+}
+
+
+public static int evenSum(int [] myArray) {
+//Write a recursive method which finds the sum of all the even ints in the list. 
+}
+
+
+public static int primeSum(int [] myArray) {
+//Write a recursive method which finds the sum of only the primes in the list.
+}
+
+*/
+
+
+			
+

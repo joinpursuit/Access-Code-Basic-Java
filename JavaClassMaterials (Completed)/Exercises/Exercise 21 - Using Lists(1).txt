@@ -1,0 +1,44 @@
+/*
+
+Exercise 21: Using Lists
+
+
+Using the classes Computer, Laptop, and Desktop from Exercise 16, either make a new main
+class that that will make an ArrayList  of Computer objects.  
+Then add the following 5 following computer objects to that list using appropriate methods:
+
+Laptop:   "Toshiba", "Satellite", 1299.50, .25, "yes"
+Laptop:   "Apple", "MacBook Air", 1759.50, .33 
+Desktop:  "Dell", "Inspiron", 449.99, .10 
+Desktop:  "HP", "Pavilion", 799.99, .05 
+Laptop:   "Acer", "Aspire", 899.99, .15 
+
+Display the information on this list to the console.
+
+Remove the HP Pavilion computer from the list and add the following computers to the 
+end of the list using appropriate methods: 
+
+Laptop:   "Sony", "VAIO", 1199.99, .25
+Desktop:  "Alienware", "Aurora", 1499.88, .10
+
+Display the new list.
+
+Experiment with various other methods that exist with the List interface.
+
+Make sure you use at least the methods we discussed in class (on powerpoint and example)
+
+
+
+Now do the same for LinkedList.  Observe the similarities.  
+
+Look at the Java API and the "dot operator" shortcut in eclipse and try to find
+some methods that are UNIQUE to ArrayList and LinkedList (meaning they do not appear in 
+the other.)  Choose 3 of these methods.  On paper with your name, explain why these methods
+makes sense ONLY for that type of List by your next Lecture class.  Be prepared to hand it 
+in and explain your answer.
+
+*/
+
+
+			
+

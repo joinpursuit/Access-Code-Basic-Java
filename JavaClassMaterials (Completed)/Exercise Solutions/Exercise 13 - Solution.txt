@@ -1,0 +1,48 @@
+/*
+Exercise 13: the Rectangle Class
+
+Write a class Rectangle 
+a. Setup two data members width and height of type int
+b. Create a constructor to create a new Rectangle which takes the 
+parameters width, height. 
+c. Write getter and setter methods for the width and the height. 
+d. Write a method getPerimeter which return the perimeter. 
+e. Write a method getArea which return the area
+*/
+
+public class Rectangle {
+
+	private int width;
+	private int height;
+	
+	public Rectangle(int w, int h){
+		width = w;
+		height = h;
+	}
+	
+	public int getWidth(){
+		return width;
+	}
+	
+	public int getHeight(){
+		return height;
+	}
+	
+	public void setWidth(int w){
+		width = w;
+	}
+	
+	public void setHeight(int h){
+		height = h;
+	}
+	
+	public int getPerimeter(){
+		int peri = (2*width) + (2*height);
+		return peri;
+	}
+	
+	public int getArea(){
+		int area = width*height;
+		return area;
+	}
+}

@@ -1,0 +1,99 @@
+/*
+
+Example 32: Lists
+
+Below is the example of the use of lists as discussed in class.  
+Try to run this code and see how it operates. 
+
+
+*/
+
+import java.util.*;
+
+
+public class ListTest {
+
+
+	public static void main(String[] args) {
+		
+		List<Integer> list = new ArrayList<Integer>();
+		
+		list.add(3);
+		list.add(25);
+		list.add(6);
+		list.add(29);
+		list.add(7);
+		list.add(12345);
+		
+		System.out.println(list);
+		System.out.println();
+		System.out.println("The value in index 1 is: " + list.get(1));
+		System.out.println("The size of the list is: " + list.size());
+
+		System.out.println();
+		
+		list.remove(1);
+		System.out.println("We have removed the value at index 1.");
+		System.out.println(list);
+		System.out.println("The value in index 1 is: " + list.get(1));
+		System.out.println("The size of the list is: " + list.size());
+		
+		System.out.println();
+		
+		list.set(1, 12345);
+		System.out.println("We have changed the value at index 1 from 6 to 12345.");
+		System.out.println(list);
+		System.out.println("The value in index 1 is: " + list.get(1));
+		System.out.println("The size of the list is: " + list.size());
+		
+		System.out.println();
+		
+		list.add(1, 987);
+		System.out.println("We have inserted a value 987 at index 1.");
+		System.out.println(list);
+		System.out.println("The value in index 1 is: " + list.get(1));
+		System.out.println("The size of the list is: " + list.size());
+		
+		System.out.println();
+		
+		if( list.contains(12345) ) 
+		{
+			System.out.println("12345 exists!");
+			System.out.println("12345 exists at index value of: " + list.indexOf(12345) );
+		}
+		else System.out.println("12345 doesn't exist!");
+		
+		
+		System.out.println();
+
+		Integer x = new Integer(12345);
+		list.remove(x);
+		System.out.println("We have removed a value 12345.");
+		System.out.println(list);
+		System.out.println("The size of the list is: " + list.size());
+		
+		System.out.println();
+		
+		Integer y = new Integer(7777);
+		list.remove(y);
+		System.out.println("We have removed a value 7777.");
+		System.out.println(list);
+		System.out.println("The size of the list is: " + list.size());
+		
+		System.out.println();
+		
+		list.clear();
+		System.out.println("We have cleared the list");
+		System.out.println(list);
+		System.out.println("The size of the list is: " + list.size());
+		
+		System.out.println();
+		
+		if (list.isEmpty() )
+			System.out.println("This list is completely empty!");
+		else System.out.println("This list is not empty.");
+		
+		
+	}
+
+}

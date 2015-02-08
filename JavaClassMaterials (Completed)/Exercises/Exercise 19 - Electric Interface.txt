@@ -1,0 +1,21 @@
+/*
+
+Exercise 19: Using an interface
+
+Create a new interface called electricDevice with the single method getPowerUsed().  
+
+Create a new class called Television with whatever data members and methods you wish or decide are needed.
+
+Have the 3 classes from Exercise 16 (Computer, Laptop, and Desktop), and the new class Television all implement 
+the interface electricDevice.  
+
+Create the method within each class to implement the abstract method getPowerUsed() from the interface.  
+Televisions should give a string "300 watts", Computers should give a string "Error - More Information Needed", 
+Laptops should give a string "50 watts", and Desktops should give a string "130 watts"
+
+In a main function, create an array of size 4 called device made using the interface electricDevice.  Fill the 
+array with one of each of the objects (Computer, Laptop, Desktop, and Television).  Use a for each loop to 
+reveal the power used by each of the objects in the array.   
+
+*/
+

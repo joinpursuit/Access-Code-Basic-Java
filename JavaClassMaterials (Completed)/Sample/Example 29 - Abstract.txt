@@ -1,0 +1,76 @@
+/*
+
+Example 29: Abstract
+
+Below is a different use of the student and undergrad class, titled Student3 and Undergrad 2.
+
+Student 3 is an example of an abstract method.  No objects of the 
+
+}
+
+And see if the error still exists.  Understand why this error existed and why it is fixed, if it was.
+*/
+
+
+//STUDENT 3 CLASS
+
+
+public abstract class Student3 {
+	
+	protected final static int NUM_OF_TESTS = 3;
+	
+	protected String name;
+	protected int[] test;
+	protected String courseGrade;
+
+public Student3() {
+	this("No name");
+}
+
+public Student3(String studentName) {
+	name = studentName;
+	test = new int[NUM_OF_TESTS];
+	courseGrade = " ***** ";
+}
+
+abstract public double computeCourseGrade();
+
+
+public String getCourseGrade() {
+	return courseGrade;
+}
+public String getName() {
+	return name;
+}
+public int getTestScore(int testNumber) {
+	return test[testNumber-1];
+}
+public void setName(String newName){
+	name = newName;
+}
+public void setTestScore(int testNumber, int testScore){
+	test[testNumber-1] = testScore;
+}
+}
+
+
+
+//UNDERGRAD2 CLASS
+
+
+public class Undergrad2 extends Student3 {
+
+	@Override
+	public double computeCourseGrade() {
+
+		int sum = 0;
+		for (int x : test)
+			sum =+ x;
+		double average = sum/3.0;
+		return average;
+
+	}
+
+}
+
+

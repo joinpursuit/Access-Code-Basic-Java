@@ -1,0 +1,52 @@
+/*
+
+Exercise 17: Abstract Class
+
+Create an abstract class called Vehicle.  Give it whatever data members and methods you wish, but make sure 
+it includes at least one data member for an abstract method getSoundSample().  
+Create classes called Automobile, Train, and Plane derived from the superclass vehicle.  These classes should 
+implement abstract method to return a String that shows what sound the vehicle makes.  
+
+*/
+
+
+//VEHICLE CLASS
+
+
+public abstract class Vehicle {
+
+	abstract String getSoundSample();
+	
+}
+
+
+//AUTOMOBILE CLASS
+
+public class Automobile extends Vehicle {
+
+	public String getSoundSample() {
+		return "Honk!";
+	}
+
+}
+
+
+//TRAIN CLASS
+
+public class Train extends Vehicle {
+
+	public String getSoundSample() {
+		return "Choo-choo!";
+	}
+
+}
+
+//PLANE CLASS
+
+public class Plane extends Vehicle {
+
+	public String getSoundSample() {
+		return "Whoosh!";
+	}
+
+}

@@ -1,0 +1,9 @@
+/*
+
+Exercise 3: Write a program that will prompt the user to pick if they wish to convert from Fahrenheit to Celsius or from Celsius to Fahrenheit.  Once the user has specified their choice, then prompt the user for the temperature of their choice, and convert that.
+
+Hint 1: Create a simple menu to the console to show options and use if/else if/else for options.
+
+Hint 2: You may use Exercise 3 from yesterday's lesson as a starting point.
+
+*/

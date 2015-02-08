@@ -1,0 +1,82 @@
+/*
+Example 7: Overloading Functions
+
+This code is very similar to Example 6, however, this also allows for the possibility of a single variable,
+the length of the side of the square, through the use of the if/elseif/else constructs.  Note that two functions 
+exist in this code and both are named "calculateArea".  However, since they have different parameters, Java is able 
+to determine which of the two methods should be used. 
+
+This is an example of calling a static method from the main class (also a static class). 
+
+ 
+*/
+
+import java.util.*;
+
+public class StaticMethodTest {
+
+	 static double calculateArea(double length, double width) {
+	
+		 double area = length*width;
+		 return area;	
+	}
+
+	 static double calculateArea(double side) {
+		 
+		 double area = side*side;
+		 return area;
+	 }
+	 
+	
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+
+		System.out.println("This program will determine the area of rectangle or square.");
+		System.out.println();
+		
+		System.out.println("Choose one number:");
+		System.out.println("Press 1 for the area of a rectangle");
+		System.out.println("Press 2 for the area of a square");
+		int choice;
+		choice = input.nextInt();
+		
+
+		if (choice == 1){
+
+			System.out.print("Enter the length of the rectangle: ");
+			double length;
+			length = input.nextDouble();
+
+			System.out.print("Enter the width of the rectangle: ");
+			double width;
+			width = input.nextDouble();
+
+			double area = calculateArea(length, width);
+				
+			System.out.println();
+	
+			System.out.println("The length of the rectangle is " + length + " inches."); 
+			System.out.println("The width of the rectangle is " + width + " inches.");
+			System.out.println("The area of the rectangle is " + area + " square inches.");		
+		}
+		
+
+		else if (choice == 2){
+
+			System.out.print("Enter the length of one side: ");
+			double side;
+			side = input.nextDouble();
+
+			double area = calculateArea(side);
+					
+			System.out.println();
+
+			System.out.println("The side of the square is " + side + " inches."); 
+			System.out.println("The area of the square is " + area + " square inches.");		
+			}
+		
+		else System.out.println("Not a valid choice!");
+	}
+
+}

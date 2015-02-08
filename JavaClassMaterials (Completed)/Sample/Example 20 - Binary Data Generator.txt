@@ -1,0 +1,119 @@
+/*
+Example 20: Binary Data Generator 
+
+This code will create several sequences of numbers of random lengths and random values.
+It will output this to a .dat and store it as binary. 
+
+*/
+
+
+import java.io.File;
+
+import java.io.FileOutputStream;
+
+import java.io.DataOutputStream;
+
+import java.util.Random;
+
+
+
+public class BinaryDataGenerator {
+ 
+
+	public static void main(String[] args) {
+
+   
+		File outfile = new File("outfile.dat");
+
+		FileOutputStream outStream;
+		DataOutputStream output;
+
+
+		try
+  
+		{
+			outStream = new FileOutputStream( outfile );
+
+   			output = new DataOutputStream( outStream );
+
+		
+}
+
+		catch( Exception e )
+
+		{
+
+			System.err.println(e);
+			return;
+
+		}
+
+
+		Random rand = new Random();
+
+		try
+		{
+   
+  
+			int numberOfSequences = rand.nextInt(100) + 1;
+			System.out.println(numberOfSequences);
+
+  			output.writeInt(numberOfSequences);
+  
+  
+
+			for ( int i = 0 ; i < numberOfSequences ; ++i )
+  
+			{
+   
+				int eid = i + 1;
+
+   				System.out.print(eid + " ");
+   
+				output.writeInt(eid);
+
+				int numberOfRecords = rand.nextInt(10) + 1;
+
+   				System.out.print(numberOfRecords + " ");
+
+   				output.writeInt(numberOfRecords);
+				for ( int j = 0 ; j < numberOfRecords ; ++j )
+
+   				{
+    
+					int data = rand.nextInt(10);
+
+    					System.out.print(data + " ");
+    
+					output.writeInt(data);
+
+				}
+
+
+   			System.out.println();
+			}
+
+  
+		output.close();
+
+
+  		}
+  
+
+		catch( Exception e )
+  
+		{
+			System.out.println(e);
+			
+return;
+
+		}
+ 
+	}
+
+}
+
+	
+
+
+

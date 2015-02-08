@@ -1,0 +1,74 @@
+/*
+
+Exercise 3: Write a program that will prompt the user to pick if they wish to convert from Fahrenheit to Celsius or from Celsius to Fahrenheit.  Once the user has specified their choice, then prompt the user for the temperature of their choice, and convert that.
+
+Hint 1: Create a simple menu to the console to show options and use if/else if/else for options.
+
+Hint 2: You may use Exercise 3 from yesterday's lesson as a starting point.
+
+Scroll down to see one solution.
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.Scanner;
+
+public class TemperatureConversion
+{
+	public static void main(String[] args)
+	{		
+		System.out.println("This is a temperature conversion program.");
+		System.out.println("Please pick the conversion of your choice:");
+		System.out.println("(1) Fahrenheit -> Celsius");
+		System.out.println("(2) Celsius -> Fahrenheit");
+		System.out.print("Enter your choice: (1 or 2): ");
+		
+		Scanner input = new Scanner(System.in);
+		int choice = input.nextInt();
+
+		double fahrenheit;
+		double celsius;
+
+		if ( choice == 1 )
+		{
+			System.out.print("Enter the temperature in Fahrenheit: ");
+			fahrenheit = input.nextDouble();
+			celsius = (fahrenheit - 32) / 9 * 5;
+			System.out.println("The temperature in Celsius is " + celsius);				
+		}
+		else if ( choice == 2 )
+		{
+			System.out.print("Enter the temperature in Celsius: ");
+			celsius = input.nextDouble();
+			fahrenheit = (9 * celsius)/ 5 + 32;
+			System.out.println("The temperature in Fahrenheit is " + fahrenheit);		
+		}
+		else
+		{
+			System.out.print("That isn't a valid option, goodbye.");
+		}
+		
+	}
+}

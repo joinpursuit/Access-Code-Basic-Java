@@ -1,0 +1,112 @@
+/*
+
+Exercise 7: How many times? 
+
+Write a program that will take in a provided text file that consists of many numbers, then examine the numbers and 
+determine which number or numbers appeared the most number of times.  Output each number and how many times it appeared, 
+then output how many times the most common number(s) appeared, and what number(s) that did.
+
+**Don't forget to include your file input inside a Try block and Catch exceptions**
+**Make sure the input file is saved to the correct project folder in your workspace**
+
+Hint: As all the numbers are between 1 and 99, you may wish to use an array of size 100 to keep track of how many each 
+number appears.
+
+See one possible solution below.
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.Scanner;
+import java.io.File;
+
+public class HowManyTimes {
+
+	public static void main(String[] args) {
+		
+		int[] tracker = new int[100];
+		String filename = "Exercise 7 - input.txt";
+		Scanner input;
+
+		try
+		{
+			File infile = new File(filename);
+			input = new Scanner(infile);
+		}
+		catch( Exception e )
+		{
+			System.err.println(e);
+			return;
+		}
+
+		while( input.hasNextInt() )
+		{
+			++tracker[input.nextInt()];
+		}
+		
+		int maxTimes = 0;
+		for (int i = 0; i < 100; ++i)
+		{
+			if ( tracker[i] > maxTimes )
+				maxTimes = tracker[i];
+			System.out.println( i + " appeared " + tracker[i] + " times." );
+		}
+		
+		System.out.println("Following number(s) appeared the most, " + maxTimes + " times.");
+		for (int i = 0; i < 100; ++i)
+			if ( tracker[i] == maxTimes )
+				System.out.print(i + " ");
+		System.out.println();
+	}
+
+}

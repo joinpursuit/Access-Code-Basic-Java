@@ -1,0 +1,60 @@
+/*
+Example 5: Guessing Game with break
+
+This is identical to the code for Example 4, except that it contains the use of the keyword 'break'.
+It will automatically leave the while loop and continue the code.  
+
+Please make sure that you understand how the keyword 'break' is used. 
+As usual, you are encouraged to look up details in the Java API.
+
+Here is another useful source on the usage of 'break': 
+http://docs.oracle.com/javase/tutorial/java/nutsandbolts/branch.html
+ 
+*/
+
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class GuessGameQuit
+{
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		Random rand = new Random();
+		
+		int secret = rand.nextInt(10) + 1;
+
+		System.out.print("Guess a number between 1 and 10.  Guess 0 to quit: ");
+		int guess = input.nextInt();
+		
+		while( guess != secret )
+		{
+			/*
+			 * Note the order of the if and else if statements...
+			 * The check to see if guess == 0 has to happen before guess < secret
+			 * 0 is always going to be less than the secret number
+			 * because smallest secret number is 1
+			 */
+
+			if ( guess == 0 )
+			{
+				System.out.println("Quitter!!");
+				break;
+			}
+			else if ( guess > secret )
+			{
+				System.out.print("Guess a smaller number (0 to quit): ");
+				guess = input.nextInt();
+			}
+			else if ( guess < secret )
+			{
+				System.out.print("Guess a bigger number (0 to quit): ");
+				guess = input.nextInt();
+			}
+		}
+		
+		if ( guess != 0 )
+			System.out.println("You got it!");
+	}
+}

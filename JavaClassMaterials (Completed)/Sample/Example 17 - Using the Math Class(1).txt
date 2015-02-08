@@ -1,0 +1,35 @@
+/*
+Example 17: Using the Math Class
+
+This code will take in two doubles x and y, then use the Math class to calculate: 
+
+1/2 sin( x - (pi / sqrt of y)
+
+Then output this result to the console
+
+*/
+
+import java.util.*;
+
+
+public class MathClass{
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+
+		System.out.print( "Enter the value for the first number: ");
+		double x = input.nextDouble();
+
+		System.out.print( "Enter the value for the second number: ");
+		double y = input.nextDouble();
+
+
+		double result = (1.0/2.0) * Math.sin( x - Math.PI / Math.sqrt(y) );
+
+
+		System.out.println("The solution is: " + result);
+
+	}
+
+}

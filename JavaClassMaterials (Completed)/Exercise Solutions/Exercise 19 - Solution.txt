@@ -1,0 +1,98 @@
+/*
+
+Exercise 19: Using an interface
+
+Create a new interface called electricDevice with the single method getPowerUsed().  
+
+Create a new class called Television with whatever data members and methods you wish or decide are needed.
+
+Have the 3 classes from Exercise 16 (Computer, Laptop, and Desktop), and the new class Television all implement 
+the interface electricDevice.  
+
+Create the method within each class to implement the abstract method getPowerUsed() from the interface.  
+Televisions should give a string "300 watts", Computers should give a string "Error - More Information Needed", 
+Laptops should give a string "50 watts", and Desktops should give a string "130 watts"
+
+In a main function, create an array of size 4 called device made using the interface electricDevice.  Fill the 
+array with one of each of the objects (Computer, Laptop, Desktop, and Television).  Use a for each loop to 
+reveal the power used by each of the objects in the array.   
+
+*/
+
+
+
+//ELECTRIC DEVICE INTERFACE
+
+
+public interface electricDevice {
+
+	public String powerUsed();
+}
+
+
+
+
+//TELEVISION CLASS
+
+public class Television implements electricDevice {
+
+
+	public String powerUsed() {
+		return "300 watts";
+	}
+}
+
+
+
+
+//NEW CODE FOR COMPUTER CLASS
+
+public class Computer implements electricDevice
+
+	public String powerUsed() {
+		return "Error - More information needed.";
+	}
+
+
+
+
+
+
+//NEW CODE FOR LAPTOP CLASS
+
+public class Laptop extends Computer implements electricDevice{
+
+	public String powerUsed() {
+		return "50 watts";
+	}
+
+
+
+
+//NEW CODE FOR DESKTOP CLASS
+
+public class Desktop extends Computer implements electricDevice{
+
+	public String powerUsed() {
+		return "130 watts.";
+	}
+
+
+
+
+//NEW CODE FOR MAIN FUNCTION
+
+		electricDevice [] machines = new electricDevice[4];
+		
+		Television tv = new Television();
+		Computer comp = new Computer();
+		Desktop desk = new Desktop();
+		Laptop lap = new Laptop();
+		
+		machines[0] = tv;
+		machines[1] = comp;		
+		machines[2] = desk;
+		machines[3] = lap;
+		
+		for (electricDevice elec : machines)
+			System.out.println("The power used by this device is " + elec.powerUsed()  );

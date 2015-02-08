@@ -1,0 +1,158 @@
+/*
+
+E34: Objects in and Out
+
+ 
+
+
+
+*/
+
+//superhero class
+			
+
+import java.io.Serializable;
+
+public class superhero implements Serializable{
+
+	private String name;
+	private String powers;
+	
+	superhero(String n, String p){
+		name = n;
+		powers = p;
+	}
+	
+	public void setName(String n){
+		name =n;
+	}
+	
+	public void setPowers(String p){
+		powers =p;
+	}
+	
+	public String getName(){
+		return name;
+	}
+	
+	public String getPowers(){
+		return powers;
+	}
+	
+	public String toString(){
+		return "The hero's name is: " + name + ".  His powers are: " + powers + ".";
+	}
+}
+
+
+
+
+
+//Avengers class; prints out a text file with information
+
+import java.io.*;
+
+public class Avengers {
+
+
+	public static void main(String[] args) {
+		
+		try{
+			superhero a = new superhero("Captain America", "Invincible Shield");
+			superhero b = new superhero("Iron Man", "Advanced Technology");
+			superhero c = new superhero("Hulk", "Super Strength");	
+			superhero d = new superhero("Thor", "Enchanted Hammer");
+
+			File outfile = new File ("SHIELD Secret File.txt");
+			FileOutputStream fos = new FileOutputStream(outfile);
+			PrintWriter output = new PrintWriter(fos);
+
+			output.println(a.getName() );
+			output.println(a.getPowers() );
+			output.println(b.getName() );
+			output.println(b.getPowers() );
+			output.println(c.getName() );
+			output.println(c.getPowers() );
+			output.println(d.getName() );
+			output.println(d.getPowers() );
+
+			output.close();
+		}
+		catch (Exception e){
+			System.out.println(e);
+		}
+	}
+
+}
+
+
+//Avengers2 class; creates a text file of outputted objects
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+
+
+public class Avengers2 {
+	public static void main(String[] args){
+		try{
+			
+			superhero a = new superhero("Captain America", "Invincible Shield");
+			superhero b = new superhero("Iron Man", "Advanced Technology");
+			superhero c = new superhero("Hulk", "Super Strength");	
+			superhero d = new superhero("Thor", "Enchanted Hammer");
+
+			File outfile = new File ("Nick Fury's Top Secret File.txt");
+			FileOutputStream fos = new FileOutputStream(outfile);
+			ObjectOutputStream oos = new ObjectOutputStream(fos);
+
+			oos.writeObject(a); 
+			oos.writeObject(b); 
+			oos.writeObject(c); 
+			oos.writeObject(d); 
+			
+			oos.close();
+		}
+		
+		catch (Exception e){
+			System.out.println(e);
+		}
+	}
+
+}
+
+
+//Avengers3 class; inputs a text file of objects and displays them
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+
+
+public class Avengers3 {
+
+
+	public static void main(String[] args) {
+		
+		try{
+		File infile = new File ("Nick Fury's Top Secret File.txt");
+		FileInputStream fis = new FileInputStream(infile);
+		ObjectInputStream ois = new ObjectInputStream(fis);
+		
+		superhero Cap = (superhero) ois.readObject();
+		superhero Tony = (superhero) ois.readObject();
+		superhero Bruce = (superhero) ois.readObject();
+		superhero Odinson = (superhero) ois.readObject();
+		
+		System.out.println(Cap);
+		System.out.println(Tony);
+		System.out.println(Bruce);
+		System.out.println(Odinson);
+		
+		}
+		catch(Exception e){
+			System.out.println(e);
+		}
+	}
+
+}

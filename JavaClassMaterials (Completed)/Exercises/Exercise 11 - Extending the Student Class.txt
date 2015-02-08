@@ -1,0 +1,4 @@
+Exercise 11 - Extending the Student Class
+ Extend the Student class by adding a new data member, gender of type String.  Declare the data member as private
+Add a new method to the Student class that would allow get and set of the new data member.
+Modify the toString method to also output gender.

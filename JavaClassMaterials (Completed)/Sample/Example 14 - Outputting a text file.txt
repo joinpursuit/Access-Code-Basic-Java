@@ -1,0 +1,59 @@
+/*
+Example 14: Outputting a text file
+
+This code will create a new text file.  Observe the Try and Catch blocks.  The created text file will be a large list
+of numbers, such as the one that will be provided for exercises in the future. 
+
+Note the try and catch blocks.
+
+**When this code is run, find the file name "file.txt" and make sure that it was created properly.**
+
+*/
+
+
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.util.Random;
+
+public class RandomNumber {
+
+	public static void main(String[] args) {
+
+		String filename = "file.txt";
+		File outfile = new File( filename );
+		PrintWriter output;
+		try
+		{
+			FileOutputStream outStream = new FileOutputStream( outfile );
+
+			output = new PrintWriter(outStream );
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.err.println(e);
+			return;
+		} 
+		catch( Exception e )
+		{
+			System.err.println(e);
+			return;
+		}
+
+		Random rand  = new Random();
+		
+		for ( int i = 0 ; i <  1000 ; ++i )
+		{
+			int num = rand.nextInt( 100 );
+			
+			System.out.println(num);
+			
+			output.println(num);
+		}
+		
+		output.close();
+	}
+
+}

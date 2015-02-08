@@ -1,0 +1,21 @@
+/*
+
+Exercise 23: Using Maps to help with complex tasks
+
+Use the input from Example 13, create a TreeMap that consists of entries that have Strings keys, and integer values.
+
+Read each word in from the input document.  If it is the first time encountered, add it to the TreeMap with the key 
+being that word and a value of 0.  If it has been encountered before, increase the value by 1.  
+
+
+After completing this TreeMap, display the full map in an organized way (using Iterator).
+Display how many times the most repeated word occurs.  
+
+Is there an easy way to display this word?  In other words, can the key associated with this value be printed to console?
+
+
+*/
+
+
+			
+

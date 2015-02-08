@@ -1,0 +1,73 @@
+/*
+
+Exercise 24: Objects in and Out
+
+Using the familyMember class and the objects created from Exericse 22, write each object to a file using the 
+methods discussed in class.  
+
+Try to examine the file as created. 
+
+In another class, use this file as input and display each object contained within (using toString or manually).  
+
+
+
+*/
+
+
+//insert the following into the code for exercise 22, do not forgot to import and implement Serializable before doing so		
+
+		try{
+		File outfile = new File ("output24.txt");
+		FileOutputStream fos = new FileOutputStream (outfile);
+		ObjectOutputStream oos = new ObjectOutputStream (fos);
+		
+		oos.writeObject(a);
+		oos.writeObject(b);
+		oos.writeObject(c);
+		oos.writeObject(d);
+		oos.writeObject(e);
+		}
+		catch (Exception ex)
+		{
+			System.err.println(ex);
+		}
+
+
+//new class to import 
+
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+
+
+public class familyMemberIn {
+
+
+	public static void main(String[] args) {
+
+		try{
+			File infile = new File ("output24.txt");
+			FileInputStream fis = new FileInputStream (infile);
+			ObjectInputStream ois = new ObjectInputStream (fis);
+
+			familyMember aa = (familyMember) ois.readObject();
+			familyMember bb = (familyMember) ois.readObject();
+			familyMember cc = (familyMember) ois.readObject();
+			familyMember dd = (familyMember) ois.readObject();
+			familyMember ee = (familyMember) ois.readObject();
+
+			System.out.println(aa);
+			System.out.println(bb);
+			System.out.println(cc);
+			System.out.println(dd);
+			System.out.println(ee);
+
+		}
+		catch(Exception ex){
+			System.out.println(ex);
+		}
+
+	}
+
+}

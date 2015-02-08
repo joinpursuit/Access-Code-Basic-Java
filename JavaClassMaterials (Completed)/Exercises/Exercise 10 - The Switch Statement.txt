@@ -1,0 +1,10 @@
+/*
+
+Exercise 10: The Switch Statement
+
+Modify Exercise 3 to use the switch statement.  Use the Default case instead of else.  
+You may use the solution posted for Exercise 3 as a starting point.  
+
+
+
+*/

@@ -1,0 +1,65 @@
+class Student{
+
+//Data Members
+	private String name;
+	private int age;
+	private String gender;
+
+
+//Default Constructor: assigns data members if no params are entered
+	public Student() {
+		name = "Unknown";
+		age = 0;
+	}
+
+//Constructor Method: initializes the Data Members with certain params
+	public Student(String s) {
+		name = s;
+		age = 0;
+	}
+
+	public Student (int i) {
+		name = "Unknown";
+		age = i;
+	}
+
+	public Student(String s, int i){
+		name = s;
+		age = i;
+	}
+
+
+//Get Method: returns the value of a certain data member
+	public String getName() {
+		return name;
+	}
+
+	
+	public int getAge() {
+		return age;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+
+//Set Method: assigns a value to a data member
+	public void setName (String s){
+		name = s;
+	}
+
+	
+	public void setAge (int i){
+		age = i;
+	}
+
+	public void setGender (String g){
+		gender= g;
+	}
+
+
+//toString Method: creates an easy way to show all data member information in one string
+	public String toString () {
+		return "Student Name: " + name + "/n" + "Student Age: " + age;
+	

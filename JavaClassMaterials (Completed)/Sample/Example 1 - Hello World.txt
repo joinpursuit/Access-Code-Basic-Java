@@ -1,0 +1,12 @@
+/*
+Example 1: Write a program that will output the text "Hello World, how are you?" to the console. 
+*/
+
+
+public class HelloWorld
+{
+	public static void main(String[] args)
+	{
+		System.out.println("Hello World, how are you?");
+	}
+}
