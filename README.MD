@@ -1,24 +1,6 @@
-Syllabus for Java Module (6 Weeks)
-========================================================================
-Week 1:
-String, int, float, long, double
-Object v.s. Literal
-arrays
-static method vs instance method
-what is the main method.
-
-Building class
-
-Week 2:
-Week 3:
-Week 4:
-Week 5:
-Week 6:
 
 
-
-
-High Level Topic (From Alex)
+High Level Topic (From Alex S.)
 ========================================================================
 inner classes
 anonymous classes
